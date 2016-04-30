@@ -8,11 +8,13 @@ namespace ConsoleClient
     {
         static void Main(string[] args)
         {
+            // request the access token using the client credentials
             var response = GetClientToken();
+            // call the API using the access token:
             CallApi(response);
 
-            response = GetUserToken();
-            CallApi(response);
+            //response = GetUserToken();
+            //CallApi(response);
         }
 
         static void CallApi(TokenResponse response)
@@ -20,7 +22,7 @@ namespace ConsoleClient
             var client = new HttpClient();
             client.SetBearerToken(response.AccessToken);
 
-            Console.WriteLine(client.GetStringAsync("http://localhost:14869/test").Result);
+            Console.WriteLine(client.GetStringAsync("http://localhost:6472/test").Result);
         }
 
         static TokenResponse GetClientToken()
@@ -30,7 +32,7 @@ namespace ConsoleClient
                 "silicon",
                 "F621F470-9731-4A25-80EF-67A6F7C5F4B8");
 
-            return client.RequestClientCredentialsAsync("api1").Result;
+            return client.RequestClientCredentialsAsync("MKP").Result;
         }
 
         static TokenResponse GetUserToken()
@@ -40,7 +42,7 @@ namespace ConsoleClient
                 "carbon",
                 "21B5F798-BE55-42BC-8AA8-0025B903DC3B");
 
-            return client.RequestResourceOwnerPasswordAsync("bob", "secret", "api1").Result;
+            return client.RequestResourceOwnerPasswordAsync("bob", "secret", "MKP").Result;
         }
     }
 }
