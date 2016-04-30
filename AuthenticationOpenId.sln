@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationOpenId", "Aut
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerHost", "ServerHost\ServerHost.csproj", "{84380C11-ED31-4DFA-AD3D-94C468F96CB2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MkpApi", "APIs\MkpApi\MkpApi.csproj", "{06937457-E71B-4ADD-8AD3-0A33F94273B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{84380C11-ED31-4DFA-AD3D-94C468F96CB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84380C11-ED31-4DFA-AD3D-94C468F96CB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84380C11-ED31-4DFA-AD3D-94C468F96CB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06937457-E71B-4ADD-8AD3-0A33F94273B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06937457-E71B-4ADD-8AD3-0A33F94273B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06937457-E71B-4ADD-8AD3-0A33F94273B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06937457-E71B-4ADD-8AD3-0A33F94273B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
