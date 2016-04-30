@@ -10,11 +10,13 @@ namespace ConsoleClient
         {
             // request the access token using the client credentials
             var response = GetClientToken();
-            // call the API using the access token:
+            // call the API using the access token
             CallApi(response);
 
-            //response = GetUserToken();
-            //CallApi(response);
+            // request an access token on behalf of a user
+            response = GetUserToken();
+            // call the API using the access token
+            CallApi(response);
         }
 
         static void CallApi(TokenResponse response)

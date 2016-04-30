@@ -7,6 +7,7 @@ namespace ServerHost
     {
         public static List<InMemoryUser> Get()
         {
+            // Subject is the unique identifier for that user that will be embedded into the access token.
             return new List<InMemoryUser>
             {
                 new InMemoryUser
