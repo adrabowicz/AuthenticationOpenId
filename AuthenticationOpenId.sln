@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerHost", "ServerHost\Se
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MkpApi", "APIs\MkpApi\MkpApi.csproj", "{06937457-E71B-4ADD-8AD3-0A33F94273B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleClient", "Clients\ConsoleClient\ConsoleClient.csproj", "{70BA4450-235B-42C8-9757-123C8EC158A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{06937457-E71B-4ADD-8AD3-0A33F94273B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06937457-E71B-4ADD-8AD3-0A33F94273B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06937457-E71B-4ADD-8AD3-0A33F94273B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70BA4450-235B-42C8-9757-123C8EC158A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70BA4450-235B-42C8-9757-123C8EC158A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70BA4450-235B-42C8-9757-123C8EC158A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70BA4450-235B-42C8-9757-123C8EC158A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
