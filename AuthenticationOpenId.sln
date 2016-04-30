@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationOpenId", "AuthenticationOpenId\AuthenticationOpenId.csproj", "{4E3ADCFB-AC51-43BC-9B8D-F113CCD812B3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerHost", "ServerHost\ServerHost.csproj", "{84380C11-ED31-4DFA-AD3D-94C468F96CB2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4E3ADCFB-AC51-43BC-9B8D-F113CCD812B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E3ADCFB-AC51-43BC-9B8D-F113CCD812B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E3ADCFB-AC51-43BC-9B8D-F113CCD812B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84380C11-ED31-4DFA-AD3D-94C468F96CB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84380C11-ED31-4DFA-AD3D-94C468F96CB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84380C11-ED31-4DFA-AD3D-94C468F96CB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84380C11-ED31-4DFA-AD3D-94C468F96CB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
