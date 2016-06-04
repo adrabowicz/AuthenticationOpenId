@@ -11,12 +11,20 @@ namespace ServerHost
             {
                 new Scope
                 {
-                    Name = "RKP"
+                    Name = "Org"
                 },
                 new Scope
                 {
-                    Name = "MKP"
-                }
+                    Name = "Device"
+                },
+                new Scope
+                {
+                    Name = "App"
+                },
+                new Scope
+                {
+                    Name = "Aegis"
+                },
             };
         }
     }

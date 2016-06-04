@@ -12,8 +12,8 @@ namespace ServerHost
                 // no human involved
                 new Client
                 {
-                    ClientName = "Silicon-only Client",
-                    ClientId = "silicon",
+                    ClientName = "KP Server App",
+                    ClientId = "KP",
                     Enabled = true,
                     AccessTokenType = AccessTokenType.Reference,
 
@@ -26,7 +26,7 @@ namespace ServerHost
 
                     AllowedScopes = new List<string>
                     {
-                        "MKP"
+                        "Org", "Device", "App","Aegis"
                     }
                 },
 
