@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationOpenId", "AuthenticationOpenId\AuthenticationOpenId.csproj", "{4E3ADCFB-AC51-43BC-9B8D-F113CCD812B3}"
 EndProject
@@ -10,6 +10,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MkpApi", "APIs\MkpApi\MkpApi.csproj", "{06937457-E71B-4ADD-8AD3-0A33F94273B6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleClient", "Clients\ConsoleClient\ConsoleClient.csproj", "{70BA4450-235B-42C8-9757-123C8EC158A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AegisApi", "APIs\AegisApi\AegisApi.csproj", "{A45929F7-DBFC-4857-8990-3F4457A15AA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrgDataApi", "APIs\OrgDataApi\OrgDataApi.csproj", "{60E8E409-3BA4-46AE-B920-18BDF3F03AA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceDataApi", "APIs\DeviceDataApi\DeviceDataApi.csproj", "{EC6F00BC-49A9-436B-82F8-BA739339F5B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppDataApi", "APIs\AppDataApi\AppDataApi.csproj", "{C0CBF4E7-B5E9-4F3F-B7FB-43027225791D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +41,22 @@ Global
 		{70BA4450-235B-42C8-9757-123C8EC158A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70BA4450-235B-42C8-9757-123C8EC158A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70BA4450-235B-42C8-9757-123C8EC158A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A45929F7-DBFC-4857-8990-3F4457A15AA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A45929F7-DBFC-4857-8990-3F4457A15AA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A45929F7-DBFC-4857-8990-3F4457A15AA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A45929F7-DBFC-4857-8990-3F4457A15AA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60E8E409-3BA4-46AE-B920-18BDF3F03AA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60E8E409-3BA4-46AE-B920-18BDF3F03AA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60E8E409-3BA4-46AE-B920-18BDF3F03AA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60E8E409-3BA4-46AE-B920-18BDF3F03AA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC6F00BC-49A9-436B-82F8-BA739339F5B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC6F00BC-49A9-436B-82F8-BA739339F5B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC6F00BC-49A9-436B-82F8-BA739339F5B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC6F00BC-49A9-436B-82F8-BA739339F5B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0CBF4E7-B5E9-4F3F-B7FB-43027225791D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0CBF4E7-B5E9-4F3F-B7FB-43027225791D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0CBF4E7-B5E9-4F3F-B7FB-43027225791D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0CBF4E7-B5E9-4F3F-B7FB-43027225791D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

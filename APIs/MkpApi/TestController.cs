@@ -16,7 +16,7 @@ namespace AMkpApipis
                 return Json(new
                 {
                     message = "OK user",
-                    client = caller.FindFirst("client_id").Value//,
+                    client = caller.FindFirst("client_id").Value,
                     subject = subjectClaim.Value
                 });
             }
