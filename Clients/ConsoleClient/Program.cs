@@ -34,7 +34,7 @@ namespace KpServerApp
                 "KP",
                 "F621F470-9731-4A25-80EF-67A6F7C5F4B8");
 
-            return client.RequestClientCredentialsAsync("MKP").Result;
+            return client.RequestClientCredentialsAsync("aegis.read").Result;
         }
 
         static TokenResponse GetUserToken()
