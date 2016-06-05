@@ -2,7 +2,7 @@
 using System;
 using System.Net.Http;
 
-namespace ConsoleClient
+namespace KpServerApp
 {
     class Program
     {

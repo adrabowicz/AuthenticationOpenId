@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerHost", "ServerHost\Se
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MkpApi", "APIs\MkpApi\MkpApi.csproj", "{06937457-E71B-4ADD-8AD3-0A33F94273B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleClient", "Clients\ConsoleClient\ConsoleClient.csproj", "{70BA4450-235B-42C8-9757-123C8EC158A5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KpServerApp", "Clients\ConsoleClient\KpServerApp.csproj", "{70BA4450-235B-42C8-9757-123C8EC158A5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AegisApi", "APIs\AegisApi\AegisApi.csproj", "{A45929F7-DBFC-4857-8990-3F4457A15AA7}"
 EndProject
