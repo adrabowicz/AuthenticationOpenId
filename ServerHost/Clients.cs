@@ -26,7 +26,7 @@ namespace ServerHost
 
                     AllowedScopes = new List<string>
                     {
-                        "Org", "Device", "App","Aegis"
+                        "org.read", "device.read", "app.read","app.readwrite", "aegis.read"
                     }
                 },
 
