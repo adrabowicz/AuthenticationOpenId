@@ -13,10 +13,10 @@ namespace KpServerApp
             // call the API using the access token
             CallApi(response);
 
-            // request an access token on behalf of a user
-            response = GetUserToken();
-            // call the API using the access token
-            CallApi(response);
+            //// request an access token on behalf of a user
+            //response = GetUserToken();
+            //// call the API using the access token
+            //CallApi(response);
         }
 
         static void CallApi(TokenResponse response)
@@ -24,7 +24,7 @@ namespace KpServerApp
             var client = new HttpClient();
             client.SetBearerToken(response.AccessToken);
 
-            Console.WriteLine(client.GetStringAsync("http://localhost:6472/test").Result);
+            Console.WriteLine(client.GetStringAsync("http://localhost:42204/test").Result);
         }
 
         static TokenResponse GetClientToken()
@@ -44,7 +44,7 @@ namespace KpServerApp
                 "carbon",
                 "21B5F798-BE55-42BC-8AA8-0025B903DC3B");
 
-            return client.RequestResourceOwnerPasswordAsync("bob", "secret", "MKP").Result;
+            return client.RequestResourceOwnerPasswordAsync("bob", "secret", "aegis.read").Result;
         }
     }
 }
