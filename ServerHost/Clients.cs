@@ -26,15 +26,15 @@ namespace ServerHost
 
                     AllowedScopes = new List<string>
                     {
-                        "org.read", "device.read", "app.read","app.readwrite", "aegis.read"
+                        "aegis.read"
                     }
                 },
 
                 // human is involved
                 new Client
                 {
-                    ClientName = "Silicon on behalf of Carbon Client",
-                    ClientId = "carbon",
+                    ClientName = "KP Server App - User",
+                    ClientId = "KP-User",
                     Enabled = true,
                     AccessTokenType = AccessTokenType.Reference,
 
@@ -47,7 +47,7 @@ namespace ServerHost
 
                     AllowedScopes = new List<string>
                     {
-                        "MKP"
+                        "org.read", "device.read", "app.read","app.readwrite"
                     }
                 }
             };

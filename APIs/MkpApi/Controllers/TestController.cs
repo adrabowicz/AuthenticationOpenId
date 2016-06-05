@@ -1,4 +1,5 @@
-﻿using System.Security.Claims;
+﻿using System;
+using System.Security.Claims;
 using System.Web.Http;
 
 namespace AMkpApipis
@@ -22,11 +23,7 @@ namespace AMkpApipis
             }
             else
             {
-                return Json(new
-                {
-                    message = "OK computer",
-                    client = caller.FindFirst("client_id").Value
-                });
+                throw new Exception("sub claim not found");
             }
         }
     }
