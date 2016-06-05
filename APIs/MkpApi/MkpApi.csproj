@@ -142,7 +142,7 @@
     <Compile Include="Controllers\OrgDataController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="TestController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>
