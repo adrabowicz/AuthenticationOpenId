@@ -11,19 +11,23 @@ namespace ServerHost
             {
                 new Scope
                 {
-                    Name = "Org"
+                    Name = "org.read"
                 },
                 new Scope
                 {
-                    Name = "Device"
+                    Name = "device.read"
                 },
                 new Scope
                 {
-                    Name = "App"
+                    Name = "app.read"
+                },
+                 new Scope
+                {
+                    Name = "app.readwrite"
                 },
                 new Scope
                 {
-                    Name = "Aegis"
+                    Name = "aegis.read"
                 },
             };
         }

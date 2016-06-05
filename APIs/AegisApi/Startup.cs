@@ -14,7 +14,7 @@ namespace AegisApi
                 Authority = "http://localhost:5000",
                 ValidationMode = ValidationMode.ValidationEndpoint,
 
-                RequiredScopes = new[] { "Aegis" }
+                RequiredScopes = new[] { "aegis.read" }
             };
 
             // plug OWIN middleware component for token authentication into the pipeline
