@@ -11,23 +11,15 @@ namespace ServerHost
             {
                 new Scope
                 {
-                    Name = "org.read"
+                    Name = "facility.read"
                 },
                 new Scope
                 {
-                    Name = "device.read"
+                    Name = "inventory.read"
                 },
                 new Scope
                 {
-                    Name = "device.readwrite"
-                },
-                new Scope
-                {
-                    Name = "app.read"
-                },
-                 new Scope
-                {
-                    Name = "app.readwrite"
+                    Name = "inventory.readwrite"
                 },
                 new Scope
                 {
