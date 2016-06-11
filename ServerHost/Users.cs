@@ -14,13 +14,13 @@ namespace ServerHost
                 {
                     Username = "bob",
                     Password = "secret",
-                    Subject = "Guid1"
+                    Subject = "BobDatabaseKey"
                 },
                 new InMemoryUser
                 {
                     Username = "alice",
                     Password = "secret",
-                    Subject = "Guid2"
+                    Subject = "AliceDatabaseKey"
                 }
             };
         }

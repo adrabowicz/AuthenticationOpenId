@@ -14,7 +14,7 @@ namespace MkpApi
                 Authority = "http://localhost:5000",
                 ValidationMode = ValidationMode.ValidationEndpoint,
 
-                RequiredScopes = new[] { "org.read", "device.read", "app.read", "app.readwrite" }
+                RequiredScopes = new[] { "org.read", "device.read", "device.readwrite", "app.read", "app.readwrite" }
             };
 
             // plug OWIN middleware component for token authentication into the pipeline
