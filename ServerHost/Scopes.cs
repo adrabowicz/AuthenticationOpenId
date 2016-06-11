@@ -19,6 +19,10 @@ namespace ServerHost
                 },
                 new Scope
                 {
+                    Name = "device.readwrite"
+                },
+                new Scope
+                {
                     Name = "app.read"
                 },
                  new Scope

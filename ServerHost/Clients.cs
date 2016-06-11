@@ -47,7 +47,7 @@ namespace ServerHost
 
                     AllowedScopes = new List<string>
                     {
-                        "org.read", "device.read", "app.read","app.readwrite"
+                        "org.read", "device.read", "device.readwrite", "app.read", "app.readwrite"
                     }
                 }
             };
