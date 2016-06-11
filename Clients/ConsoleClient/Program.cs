@@ -44,7 +44,7 @@ namespace KpServerApp
                 "KP-User",
                 "21B5F798-BE55-42BC-8AA8-0025B903DC3B");
 
-            return client.RequestResourceOwnerPasswordAsync("bob", "secret", "device.read").Result;
+            return client.RequestResourceOwnerPasswordAsync("bob", "secret", "device.readwrite").Result;
         }
     }
 }
