@@ -12,8 +12,8 @@ namespace ServerHost
                 // no human involved
                 new Client
                 {
-                    ClientName = "KP Server App",
-                    ClientId = "KP",
+                    ClientName = "KP Server App - Machine",
+                    ClientId = "KP-Machine",
                     Enabled = true,
                     AccessTokenType = AccessTokenType.Reference,
 
