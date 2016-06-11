@@ -7,7 +7,7 @@ using System.Web.Http;
 
 namespace MkpApi.Controllers
 {
-    public class AppDataController : ApiController
+    public class FacilityReadController : ApiController
     {
     }
 }

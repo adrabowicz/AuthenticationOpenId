@@ -7,7 +7,7 @@ using System.Web.Http;
 
 namespace MkpApi.Controllers
 {
-    public class DeviceDataController : ApiController
+    public class InventoryReadWriteController : ApiController
     {
     }
 }

@@ -145,9 +145,8 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\AppDataController.cs" />
-    <Compile Include="Controllers\DeviceDataController.cs" />
-    <Compile Include="Controllers\OrgDataController.cs" />
+    <Compile Include="Controllers\InventoryReadWriteController.cs" />
+    <Compile Include="Controllers\FacilityReadController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Controllers\TestController.cs" />
