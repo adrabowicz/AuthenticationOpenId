@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Security.Claims;
 using System.Web.Http;
+using Thinktecture.IdentityModel.WebApi;
 
 namespace AMkpApipis
 {
     [Route("test")]
+    [ScopeAuthorize("device.readwrite")]
     public class TestController : ApiController
     {
         public IHttpActionResult Get()
