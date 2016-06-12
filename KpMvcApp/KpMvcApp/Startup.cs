@@ -1,4 +1,6 @@
 ﻿using Owin;
+using Microsoft.Owin.Security.Cookies;
+using Microsoft.Owin.Security.OpenIdConnect;
 
 namespace KpMvcApp
 {
@@ -6,6 +8,20 @@ namespace KpMvcApp
     {
         public void Configuration(IAppBuilder app)
         {
+            app.UseCookieAuthentication(new CookieAuthenticationOptions
+            {
+                AuthenticationType = "Cookies"
+            });
+
+            app.UseOpenIdConnectAuthentication(new OpenIdConnectAuthenticationOptions
+            {
+                Authority = "http://localhost:50000/identity",
+                ClientId = "KP-BrowserUser",
+                RedirectUri = "http://localhost:14689/",
+                ResponseType = "id_token",
+
+                SignInAsAuthenticationType = "Cookies"
+            });
         }
     }
 }
