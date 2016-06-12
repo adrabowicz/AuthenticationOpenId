@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AegisApi", "APIs\AegisApi\A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APIs", "APIs", "{46B3B636-8C8E-4D9A-84E4-9E3C495D91F2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KpMvcApp", "KpMvcApp\KpMvcApp\KpMvcApp.csproj", "{9DEA5040-C1E5-4B84-879B-D13A40287EA7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{A45929F7-DBFC-4857-8990-3F4457A15AA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A45929F7-DBFC-4857-8990-3F4457A15AA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A45929F7-DBFC-4857-8990-3F4457A15AA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DEA5040-C1E5-4B84-879B-D13A40287EA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DEA5040-C1E5-4B84-879B-D13A40287EA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DEA5040-C1E5-4B84-879B-D13A40287EA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DEA5040-C1E5-4B84-879B-D13A40287EA7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
