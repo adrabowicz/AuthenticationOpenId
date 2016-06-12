@@ -1,5 +1,7 @@
-﻿using IdentityServer3.Core.Services.InMemory;
+﻿using System.Security.Claims;
 using System.Collections.Generic;
+using IdentityServer3.Core;
+using IdentityServer3.Core.Services.InMemory;
 
 namespace ServerHost
 {
@@ -14,7 +16,13 @@ namespace ServerHost
                 {
                     Username = "bob",
                     Password = "secret",
-                    Subject = "BobDatabaseKey"
+                    Subject = "BobDatabaseKey",
+
+                    Claims = new[]
+                    {
+                        new Claim(Constants.ClaimTypes.GivenName, "Bob"),
+                        new Claim(Constants.ClaimTypes.FamilyName, "Smith")
+                    }
                 },
                 new InMemoryUser
                 {

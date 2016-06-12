@@ -49,6 +49,25 @@ namespace ServerHost
                     {
                         "facility.read", "inventory.read", "inventory.readwrite"
                     }
+                },
+
+                new Client
+                {
+                    ClientName = "KP Browser App - User",
+                    ClientId = "KP-BrowserUser",
+                    Enabled = true,
+
+                    Flow = Flows.Implicit,
+
+                    RedirectUris = new List<string>
+                    {
+                        "https://localhost:44319/"
+                    },
+
+                    AllowedScopes = new List<string>
+                    {
+                        "facility.read", "inventory.read", "inventory.readwrite"
+                    }
                 }
             };
         }
