@@ -9,6 +9,8 @@ namespace ServerHost
         {
             var options = new IdentityServerOptions
             {
+                SiteName = "Embedded IdentityServer",
+
                 Factory = new IdentityServerServiceFactory()
                             .UseInMemoryClients(Clients.Get())
                             .UseInMemoryScopes(Scopes.Get())

@@ -8,7 +8,7 @@ namespace MkpApi
     {
         public void Configuration(IAppBuilder app)
         {
-            // accept access tokens from identityserver and require a scope of 'MKP'
+            // accept access tokens from identityserver and require a scope 
             var tokenAuthenticationOptions = new IdentityServerBearerTokenAuthenticationOptions
             {
                 Authority = "http://localhost:5000",
