@@ -15,7 +15,7 @@ namespace KpMvcApp
 
             app.UseOpenIdConnectAuthentication(new OpenIdConnectAuthenticationOptions
             {
-                Authority = "http://localhost:50000/identity",
+                Authority = "http://localhost:5000/identity",
                 ClientId = "KP-BrowserUser",
                 RedirectUri = "http://localhost:14689/",
                 ResponseType = "id_token",
