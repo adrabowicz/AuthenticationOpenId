@@ -59,9 +59,10 @@ namespace ServerHost
 
                     Flow = Flows.Implicit,
 
+                    // allowed redirect Uris
                     RedirectUris = new List<string>
                     {
-                        "https://localhost:44319/"
+                        "https://localhost:44375/"
                     },
 
                     AllowedScopes = new List<string>

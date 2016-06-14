@@ -17,7 +17,7 @@ namespace KpMvcApp
             {
                 Authority = "http://localhost:5000/identity",
                 ClientId = "KP-BrowserUser",
-                RedirectUri = "http://localhost:14689/",
+                RedirectUri = "https://localhost:44375/",
                 ResponseType = "id_token",
 
                 SignInAsAuthenticationType = "Cookies"
