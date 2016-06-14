@@ -65,6 +65,7 @@ namespace ServerHost
                         "https://localhost:44375/"
                     },
 
+                    // by default the OIDC middleware asks for two scopes: openid and profile
                     AllowedScopes = new List<string>
                     {
                         "openid", "profile", "facility.read", "inventory.read", "inventory.readwrite"
