@@ -67,7 +67,7 @@ namespace ServerHost
 
                     AllowedScopes = new List<string>
                     {
-                        "facility.read", "inventory.read", "inventory.readwrite"
+                        "openid", "profile", "facility.read", "inventory.read", "inventory.readwrite"
                     }
                 }
             };
