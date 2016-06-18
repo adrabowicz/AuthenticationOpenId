@@ -1,6 +1,7 @@
-﻿using Owin;
-using System.Web.Http;
+﻿using System.Web.Http;
+using Owin;
 using IdentityServer3.AccessTokenValidation;
+using CommonModule;
 
 namespace MkpApi
 {
@@ -11,7 +12,7 @@ namespace MkpApi
             // accept access tokens from identityserver and require a scope 
             var tokenAuthenticationOptions = new IdentityServerBearerTokenAuthenticationOptions
             {
-                Authority = "http://localhost:5000",
+                Authority = Config.IdentityServerBaseIp,
                 ValidationMode = ValidationMode.ValidationEndpoint,
 
                 RequiredScopes = new[] { "facility.read", "inventory.read", "inventory.readwrite" }

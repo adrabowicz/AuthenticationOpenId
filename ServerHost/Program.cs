@@ -1,6 +1,7 @@
-﻿using Microsoft.Owin.Hosting;
+﻿using System;
+using Microsoft.Owin.Hosting;
 using Serilog;
-using System;
+using CommonModule;
 
 namespace ServerHost
 {
@@ -15,7 +16,7 @@ namespace ServerHost
                 .CreateLogger();
 
             // hosting identityserver
-            using (WebApp.Start<Startup>("http://localhost:5000"))
+            using (WebApp.Start<Startup>(Config.IdentityServerBaseIp))
             {
                 Console.WriteLine("server running...");
                 Console.ReadLine();

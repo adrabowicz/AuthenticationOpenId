@@ -1,6 +1,7 @@
-﻿using IdentityModel.Client;
-using System;
+﻿using System;
 using System.Net.Http;
+using IdentityModel.Client;
+using CommonModule;
 
 namespace KpServerApp
 {
@@ -9,14 +10,14 @@ namespace KpServerApp
         static void Main(string[] args)
         {
             // request the access token using the client credentials
-            var response = GetClientToken("http://localhost:5000/connect/token");
+            var response = GetClientToken(Config.IdentityServerConnectTokenIp);
             // call the API using the access token
-            CallApi(response, "https://localhost:44351/test");
+            CallApi(response, Config.AegisApiTestIp);
 
             // request an access token on behalf of a user
-            response = GetUserToken("http://localhost:5000/connect/token");
+            response = GetUserToken(Config.IdentityServerConnectTokenIp);
             // call the API using the access token
-            CallApi(response, "https://localhost:44379/test");
+            CallApi(response, Config.MkpApiTestIp);
         }
 
         static void CallApi(TokenResponse response, string apiUrl)

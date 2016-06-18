@@ -151,7 +151,12 @@
     <Compile Include="Startup.cs" />
     <Compile Include="Controllers\TestController.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\CommonModule\CommonModule.csproj">
+      <Project>{ff35ac0e-a5cc-429f-97c2-70ffa6e3d0d2}</Project>
+      <Name>CommonModule</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

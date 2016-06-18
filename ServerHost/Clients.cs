@@ -1,5 +1,6 @@
-﻿using IdentityServer3.Core.Models;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using IdentityServer3.Core.Models;
+using CommonModule;
 
 namespace ServerHost
 {
@@ -61,7 +62,7 @@ namespace ServerHost
                     // allowed redirect Uris
                     RedirectUris = new List<string>
                     {
-                        "https://localhost:44375/"
+                        Config.KpMvcAppBaseIp
                     },
 
                     // by default the OIDC middleware asks for two scopes: openid and profile
