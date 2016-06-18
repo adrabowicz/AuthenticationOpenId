@@ -53,11 +53,11 @@ namespace ServerHost
 
                 new Client
                 {
-                    ClientName = "KP Browser App - User",
-                    ClientId = "KP-BrowserUser",
-                    Enabled = true,
+                    ClientName = "KP Client App - User",
+                    ClientId = "KP-ClientUser",
 
                     Flow = Flows.Implicit,
+                    Enabled = true,
 
                     // allowed redirect Uris
                     RedirectUris = new List<string>

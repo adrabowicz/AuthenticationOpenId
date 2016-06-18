@@ -11,12 +11,12 @@ namespace KpServerApp
             // request the access token using the client credentials
             var response = GetClientToken();
             // call the API using the access token
-            CallApi(response, "http://localhost:42204/test");
+            CallApi(response, "https://localhost:44351/test");
 
             // request an access token on behalf of a user
             response = GetUserToken();
             // call the API using the access token
-            CallApi(response, "http://localhost:6472/test");
+            CallApi(response, "https://localhost:44379/test");
         }
 
         static void CallApi(TokenResponse response, string apiUrl)
