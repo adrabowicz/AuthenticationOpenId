@@ -31,7 +31,7 @@ namespace KpServerApp
         {
             var client = new TokenClient(
                 "http://localhost:5000/connect/token",
-                "KP-Machine",
+                "Kp-Server-Machine",
                 "F621F470-9731-4A25-80EF-67A6F7C5F4B8");
 
             return client.RequestClientCredentialsAsync("aegis.read").Result;
@@ -41,7 +41,7 @@ namespace KpServerApp
         {
             var client = new TokenClient(
                 "http://localhost:5000/connect/token",
-                "KP-User",
+                "Kp-Server-User",
                 "21B5F798-BE55-42BC-8AA8-0025B903DC3B");
 
             return client.RequestResourceOwnerPasswordAsync("bob", "secret", "inventory.readwrite").Result;

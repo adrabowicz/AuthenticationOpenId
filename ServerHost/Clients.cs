@@ -13,7 +13,7 @@ namespace ServerHost
                 new Client
                 {
                     ClientName = "KP Server App - Machine",
-                    ClientId = "KP-Machine",
+                    ClientId = "Kp-Server-Machine",
                     Enabled = true,
                     AccessTokenType = AccessTokenType.Reference,
 
@@ -34,7 +34,7 @@ namespace ServerHost
                 new Client
                 {
                     ClientName = "KP Server App - User",
-                    ClientId = "KP-User",
+                    ClientId = "Kp-Server-User",
                     Enabled = true,
                     AccessTokenType = AccessTokenType.Reference,
 
@@ -53,8 +53,8 @@ namespace ServerHost
 
                 new Client
                 {
-                    ClientName = "KP Client App - User",
-                    ClientId = "KP-ClientUser",
+                    ClientName = "KP MVC App - User",
+                    ClientId = "Kp-Mvc-User",
 
                     Flow = Flows.Implicit,
                     Enabled = true,
