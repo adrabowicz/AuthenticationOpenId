@@ -44,7 +44,7 @@ namespace ServerHost
                 {
                     SiteName = "Embedded IdentityServer",
                     RequireSsl = false,
-                    //SigningCertificate = LoadCertificate(),
+                    SigningCertificate = LoadCertificate(),
 
                     Factory = new IdentityServerServiceFactory()
                                 .UseInMemoryUsers(Users.Get())
@@ -56,8 +56,8 @@ namespace ServerHost
 
         private static X509Certificate2 LoadCertificate()
         {
-            return new X509Certificate2(
-            string.Format(@"{0}\bin\identityServer\idsrv3test.pfx", AppDomain.CurrentDomain.BaseDirectory), "idsrv3test");
+            var path = @"C:\KP\Certificates\idsrv3test.pfx";
+            return new X509Certificate2(path, "idsrv3test");
         }
     }
 }
