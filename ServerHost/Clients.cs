@@ -14,10 +14,10 @@ namespace ServerHost
                 {
                     ClientName = "KP Server App - Machine",
                     ClientId = "Kp-Server-Machine",
-                    Enabled = true,
                     AccessTokenType = AccessTokenType.Reference,
 
                     Flow = Flows.ClientCredentials,
+                    Enabled = true,
 
                     ClientSecrets = new List<Secret>
                     {
@@ -30,15 +30,14 @@ namespace ServerHost
                     }
                 },
 
-                // human is involved
                 new Client
                 {
                     ClientName = "KP Server App - User",
                     ClientId = "Kp-Server-User",
-                    Enabled = true,
                     AccessTokenType = AccessTokenType.Reference,
 
                     Flow = Flows.ResourceOwner,
+                    Enabled = true,
 
                     ClientSecrets = new List<Secret>
                     {
