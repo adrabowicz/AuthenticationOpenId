@@ -54,7 +54,7 @@ namespace ServerHost
                 new Client
                 {
                     ClientName = "KP MVC App - User",
-                    ClientId = "Kp-Mvc-User",
+                    ClientId = "Kp-MvcApp-User",
 
                     Flow = Flows.Implicit,
                     Enabled = true,
