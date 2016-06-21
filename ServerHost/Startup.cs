@@ -1,8 +1,5 @@
-﻿using System;
-using System.Security.Cryptography.X509Certificates;
-using Owin;
+﻿using Owin;
 using IdentityServer3.Core.Configuration;
-using IdentityServer3.Core.Models;
 
 namespace ServerHost
 {
