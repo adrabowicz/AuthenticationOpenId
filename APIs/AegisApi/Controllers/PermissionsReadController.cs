@@ -4,7 +4,7 @@ using System.Web.Http;
 namespace AegisApi.Controllers
 {
     [Route("test")]
-    public class PermissionsController : ApiController
+    public class PermissionsReadController : ApiController
     {
         public IHttpActionResult Get()
         {

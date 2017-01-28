@@ -4,7 +4,7 @@ using System.Web.Http;
 namespace AegisApi.Controllers
 {
     [Route("test")]
-    public class IdentityController : ApiController
+    public class IdentityReadController : ApiController
     {
         public IHttpActionResult Get()
         {

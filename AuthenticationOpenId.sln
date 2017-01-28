@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerHost", "ServerHost\ServerHost.csproj", "{84380C11-ED31-4DFA-AD3D-94C468F96CB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MkpApi", "APIs\MkpApi\MkpApi.csproj", "{06937457-E71B-4ADD-8AD3-0A33F94273B6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KpApi", "APIs\MkpApi\KpApi.csproj", "{06937457-E71B-4ADD-8AD3-0A33F94273B6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KpServerApp", "Clients\ConsoleClient\KpServerApp.csproj", "{70BA4450-235B-42C8-9757-123C8EC158A5}"
 EndProject
