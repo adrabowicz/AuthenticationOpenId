@@ -1,12 +1,7 @@
-﻿using IdentityServer3.Core.Configuration;
-using Owin;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System;
 using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-using static IdentityServer3.Core.Constants;
+using Owin;
+using IdentityServer3.Core.Configuration;
 
 namespace WebHost
 {
@@ -24,7 +19,7 @@ namespace WebHost
                     Factory = new IdentityServerServiceFactory()
                                 .UseInMemoryUsers(Users.Get())
                                 .UseInMemoryClients(Clients.Get())
-                                .UseInMemoryScopes(StandardScopes.All)
+                              //@todo  .UseInMemoryScopes(StandardScopes.All)
                 });
             });
         }

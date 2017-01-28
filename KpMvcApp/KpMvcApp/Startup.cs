@@ -11,25 +11,26 @@ namespace KpMvcApp
     {
         public void Configuration(IAppBuilder app)
         {
-            app.Map("/identity", idsrvApp =>
-            {
-                idsrvApp.UseIdentityServer(new IdentityServerOptions
-                {
-                    SiteName = "Embedded IdentityServer",
-                    RequireSsl = false,
-                    SigningCertificate = LoadCertificate(),
+            //@todo
+            //app.Map("/identity", idsrvApp =>
+            //{
+            //    idsrvApp.UseIdentityServer(new IdentityServerOptions
+            //    {
+            //        SiteName = "Embedded IdentityServer",
+            //        RequireSsl = false,
+            //        SigningCertificate = LoadCertificate(),
 
-                    Factory = new IdentityServerServiceFactory()
-                                .UseInMemoryUsers(Users.Get())
-                                .UseInMemoryClients(Clients.Get())
-                                .UseInMemoryScopes(StandardScopes.All)
-                });
-            });
+            //        Factory = new IdentityServerServiceFactory()
+            //                    .UseInMemoryUsers(Users.Get())
+            //                    .UseInMemoryClients(Clients.Get())
+            //                    .UseInMemoryScopes(StandardScopes.All)
+            //    });
+            //});
 
-            app.UseCookieAuthentication(new CookieAuthenticationOptions
-            {
-                AuthenticationType = "Cookies"
-            });
+            //app.UseCookieAuthentication(new CookieAuthenticationOptions
+            //{
+            //    AuthenticationType = "Cookies"
+            //});
 
             app.UseOpenIdConnectAuthentication(new OpenIdConnectAuthenticationOptions
             {
