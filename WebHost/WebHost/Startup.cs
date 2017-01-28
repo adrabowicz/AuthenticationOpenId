@@ -2,6 +2,7 @@
 using System.Security.Cryptography.X509Certificates;
 using Owin;
 using IdentityServer3.Core.Configuration;
+using Configuration;
 
 namespace WebHost
 {
