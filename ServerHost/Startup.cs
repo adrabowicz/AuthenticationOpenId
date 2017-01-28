@@ -13,7 +13,7 @@ namespace ServerHost
         {
             var options = new IdentityServerOptions
             {
-                SiteName = "Embedded IdentityServer",
+                SiteName = "MKP Test",
 
                 Factory = new IdentityServerServiceFactory()
                             .UseInMemoryClients(Clients.Get())
