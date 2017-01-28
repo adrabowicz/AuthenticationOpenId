@@ -1,20 +1,15 @@
-using System.Security.Claims;
 using System.Web.Http;
+using Thinktecture.IdentityModel.WebApi;
 
 namespace AegisApi.Controllers
 {
     [Route("test")]
+    [ScopeAuthorize("cidm_permissions.read")]
     public class PermissionsReadController : ApiController
     {
         public IHttpActionResult Get()
         {
-            var caller = User as ClaimsPrincipal;
-
-            return Json(new
-            {
-                message = "OK computer",
-                client = caller.FindFirst("client_id").Value
-            });
+            return Ok();
         }
     }
 }
