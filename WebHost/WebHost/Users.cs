@@ -14,21 +14,27 @@ namespace WebHost
             {
                 new InMemoryUser
                 {
-                    Username = "bob",
+                    Username = "ma_med_reader",
                     Password = "secret",
-                    Subject = "BobDatabaseKey",
+                    Subject = "ma_med_reader_id",
 
                     Claims = new[]
                     {
-                        new Claim(Constants.ClaimTypes.GivenName, "Bob"),
-                        new Claim(Constants.ClaimTypes.FamilyName, "Smith")
+                        new Claim(Constants.ClaimTypes.GivenName, "ma_med_reader"),
+                        new Claim(Constants.ClaimTypes.FamilyName, "ma_med_reader")
                     }
                 },
                 new InMemoryUser
                 {
-                    Username = "alice",
+                    Username = "ma_med_reader_writer",
                     Password = "secret",
-                    Subject = "AliceDatabaseKey"
+                    Subject = "ma_med_reader_writer_id",
+                },
+                new InMemoryUser
+                {
+                    Username = "bemchmarking_med_infusion_reader",
+                    Password = "secret",
+                    Subject = "bemchmarking_med_infusion_reader_id",
                 }
             };
         }

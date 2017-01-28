@@ -1,10 +1,5 @@
-﻿using CommonModule;
+﻿using System.Collections.Generic;
 using IdentityServer3.Core.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WebHost
 {
@@ -16,22 +11,21 @@ namespace WebHost
             {
                 new Client
                 {
-                    ClientName = "KP MVC App - User",
-                    ClientId = "Kp-MvcApp-User",
+                    ClientName = "MA",
+                    ClientId = "ma",
+                    AccessTokenType = AccessTokenType.Reference,
 
-                    Flow = Flows.Implicit,
+                    Flow = Flows.ResourceOwner,
                     Enabled = true,
 
-                    // allowed redirect Uris
-                    RedirectUris = new List<string>
+                    ClientSecrets = new List<Secret>
                     {
-                        Config.KpMvcAppBaseIp
+                        new Secret("21B5F798-BE55-42BC-8AA8-0025B903DC3B".Sha256())
                     },
 
-                    // by default the OIDC middleware asks for two scopes: openid and profile
                     AllowedScopes = new List<string>
                     {
-                        "openid", "profile", "facility.read", "inventory.read", "inventory.readwrite"
+                        "cidm_permissions.read", "common-menu.read", "med.read", "med.readwrite"
                     }
                 }
             };

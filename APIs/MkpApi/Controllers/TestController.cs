@@ -6,7 +6,7 @@ using Thinktecture.IdentityModel.WebApi;
 namespace AMkpApipis
 {
     [Route("test")]
-    [ScopeAuthorize("inventory.readwrite", "inventory.read")]
+    [ScopeAuthorize("med.read", "med.readwrite")]
     public class TestController : ApiController
     {
         public IHttpActionResult Get()

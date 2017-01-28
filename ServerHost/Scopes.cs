@@ -11,20 +11,28 @@ namespace ServerHost
             {
                 new Scope
                 {
-                    Name = "facility.read"
+                    Name = "cidm_identity.read"
                 },
                 new Scope
                 {
-                    Name = "inventory.read"
+                    Name = "cidm_permissions.read"
                 },
                 new Scope
                 {
-                    Name = "inventory.readwrite"
+                    Name = "common-menu.read"
                 },
                 new Scope
                 {
-                    Name = "aegis.read"
+                    Name = "med.read"
                 },
+                new Scope
+                {
+                    Name = "med.readwrite"
+                },
+                new Scope
+                {
+                    Name = "infusion.read"
+                }
             };
         }
     }
