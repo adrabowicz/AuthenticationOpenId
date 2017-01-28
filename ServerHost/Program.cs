@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.Owin.Hosting;
 using Serilog;
-using CommonModule;
+using Configuration;
 
 namespace ServerHost
 {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net.Http;
 using IdentityModel.Client;
-using CommonModule;
+using Configuration;
 
 namespace KpServerApp
 {

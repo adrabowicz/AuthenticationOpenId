@@ -2,7 +2,7 @@
 using Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OpenIdConnect;
-using CommonModule;
+using Configuration;
 using IdentityServer3.Core.Models;
 
 namespace KpMvcApp

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerHost", "ServerHost\ServerHost.csproj", "{84380C11-ED31-4DFA-AD3D-94C468F96CB2}"
 EndProject
@@ -15,9 +15,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APIs", "APIs", "{46B3B636-8
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KpMvcApp", "KpMvcApp\KpMvcApp\KpMvcApp.csproj", "{9DEA5040-C1E5-4B84-879B-D13A40287EA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonModule", "Common\CommonModule\CommonModule.csproj", "{FF35AC0E-A5CC-429F-97C2-70FFA6E3D0D2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebHost", "WebHost\WebHost\WebHost.csproj", "{53558FFA-03AC-4CEE-9998-EC2B688A61B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Configuration", "Configuration\Configuration.csproj", "{9A253F5D-3F7E-4E8A-B465-64D233D7C319}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,14 +45,14 @@ Global
 		{9DEA5040-C1E5-4B84-879B-D13A40287EA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DEA5040-C1E5-4B84-879B-D13A40287EA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DEA5040-C1E5-4B84-879B-D13A40287EA7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FF35AC0E-A5CC-429F-97C2-70FFA6E3D0D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FF35AC0E-A5CC-429F-97C2-70FFA6E3D0D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FF35AC0E-A5CC-429F-97C2-70FFA6E3D0D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FF35AC0E-A5CC-429F-97C2-70FFA6E3D0D2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{53558FFA-03AC-4CEE-9998-EC2B688A61B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{53558FFA-03AC-4CEE-9998-EC2B688A61B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53558FFA-03AC-4CEE-9998-EC2B688A61B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53558FFA-03AC-4CEE-9998-EC2B688A61B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A253F5D-3F7E-4E8A-B465-64D233D7C319}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A253F5D-3F7E-4E8A-B465-64D233D7C319}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A253F5D-3F7E-4E8A-B465-64D233D7C319}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A253F5D-3F7E-4E8A-B465-64D233D7C319}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

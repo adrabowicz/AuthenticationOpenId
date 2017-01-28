@@ -1,7 +1,7 @@
 ﻿using System.Web.Http;
 using Owin;
 using IdentityServer3.AccessTokenValidation;
-using CommonModule;
+using Configuration;
 
 namespace AegisApi
 {
