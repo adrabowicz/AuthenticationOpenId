@@ -157,7 +157,7 @@
     <Compile Include="Controllers\MedReadController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="Controllers\InventoryReadController.cs" />
+    <Compile Include="Controllers\InfusionReadController.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Configuration\Configuration.csproj">
