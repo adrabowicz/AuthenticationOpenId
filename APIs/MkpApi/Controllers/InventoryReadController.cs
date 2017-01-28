@@ -7,7 +7,7 @@ namespace AMkpApipis
 {
     [Route("test")]
     [ScopeAuthorize("med.read", "med.readwrite")]
-    public class TestController : ApiController
+    public class InventoryReadController : ApiController
     {
         public IHttpActionResult Get()
         {

@@ -153,11 +153,11 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\InventoryReadWriteController.cs" />
-    <Compile Include="Controllers\FacilityReadController.cs" />
+    <Compile Include="Controllers\MedReadWriteController.cs" />
+    <Compile Include="Controllers\MedReadController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Controllers\InventoryReadController.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Configuration\Configuration.csproj">
