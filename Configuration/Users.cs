@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using IdentityServer3.Core;
 using IdentityServer3.Core.Services.InMemory;
 
-namespace ServerHost
+namespace Configuration
 {
-    static class Users
+    public static class Users
     {
         public static List<InMemoryUser> Get()
         {
