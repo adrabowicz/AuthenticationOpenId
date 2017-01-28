@@ -1,10 +1,10 @@
-﻿using System.Security.Claims;
+using System.Security.Claims;
 using System.Web.Http;
 
 namespace AegisApi.Controllers
 {
     [Route("test")]
-    public class TestController : ApiController
+    public class PermissionsController : ApiController
     {
         public IHttpActionResult Get()
         {
