@@ -12,7 +12,7 @@ namespace Configuration
         public const string MkpApiBaseIp = "https://localhost:44379/";
         public static string MkpApiTestIp = MkpApiBaseIp + "/test";
 
-        public const string AegisApiBaseIp = "https://localhost:44351";
-        public static string AegisApiTestIp = AegisApiBaseIp + "/test";
+        public const string CidmApiBaseIp = "https://localhost:44351";
+        public static string CidmApiTestIp = CidmApiBaseIp + "/test";
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System.Web.Http;
 using Thinktecture.IdentityModel.WebApi;
 
-namespace AegisApi.Controllers
+namespace CidmApi.Controllers
 {
     [Route("test")]
     [ScopeAuthorize("cidm_identity.read")]

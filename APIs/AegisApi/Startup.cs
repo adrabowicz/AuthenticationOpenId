@@ -3,7 +3,7 @@ using Owin;
 using IdentityServer3.AccessTokenValidation;
 using Configuration;
 
-namespace AegisApi
+namespace CidmApi
 {
     public class Startup
     {
