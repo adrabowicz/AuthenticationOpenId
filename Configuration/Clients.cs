@@ -3,7 +3,7 @@ using IdentityServer3.Core.Models;
 
 namespace ServerHost
 {
-    static class Clients
+    public static class Clients
     {
         public static List<Client> Get()
         {
