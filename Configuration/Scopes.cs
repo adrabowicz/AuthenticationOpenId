@@ -19,7 +19,7 @@ namespace Configuration
                 },
                 new Scope
                 {
-                    Name = "common-menu.read"
+                    Name = "common_menu.read"
                 },
                 new Scope
                 {

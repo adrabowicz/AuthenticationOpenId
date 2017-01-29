@@ -44,7 +44,7 @@ namespace Configuration
 
                     AllowedScopes = new List<string>
                     {
-                        "cidm_permissions.read", "common-menu.read", "med.read", "med.readwrite"
+                        "cidm_permissions.read", "common_menu.read", "med.read", "med.readwrite"
                     }
                 }
             };

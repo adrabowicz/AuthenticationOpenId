@@ -4,7 +4,7 @@ using Thinktecture.IdentityModel.WebApi;
 namespace CommonApi.Controllers
 {
     [Route("test")]
-    [ScopeAuthorize("common-menu.read")]
+    [ScopeAuthorize("common_menu.read")]
     class MenuReadController : ApiController
     {
         public IHttpActionResult Get()
