@@ -13,7 +13,7 @@ namespace ServerHost
         {
             var options = new IdentityServerOptions
             {
-                SiteName = "MKP Test",
+                SiteName = "Config Test",
 
                 Factory = new IdentityServerServiceFactory()
                             .UseInMemoryClients(Clients.Get())
