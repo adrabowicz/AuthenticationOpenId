@@ -12,7 +12,7 @@ namespace CidmApi
             // accept access tokens from identityserver and require a scope of 'MKP'
             var tokenAuthenticationOptions = new IdentityServerBearerTokenAuthenticationOptions
             {
-                Authority = Config.IdentityServerBaseIp,
+                Authority = Config.IdentityServerBaseIP,
                 ValidationMode = ValidationMode.ValidationEndpoint,
 
                 RequiredScopes = new[] { "aegis.read" }

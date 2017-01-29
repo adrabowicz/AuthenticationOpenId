@@ -10,9 +10,9 @@ namespace KpServerApp
         static void Main(string[] args)
         {
             // request an access token on behalf of a user
-            var response = GetUserToken(Config.IdentityServerConnectTokenIp);
+            var response = GetUserToken(Config.IdentityServerConnectTokenIP);
             // call the API using the access token
-            CallApi(response, Config.MkpApiTestIp);
+            CallApi(response, Config.KpApiTestIP);
         }
 
         static void CallApi(TokenResponse response, string apiUrl)
