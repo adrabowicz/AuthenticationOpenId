@@ -14,21 +14,21 @@ namespace Configuration
             {
                 new InMemoryUser
                 {
-                    Username = "ma_med_reader",
+                    Username = "med_reader",
                     Password = "secret",
-                    Subject = "ma_med_reader_id",
+                    Subject = "med_reader_id",
 
                     Claims = new[]
                     {
-                        new Claim(Constants.ClaimTypes.GivenName, "ma_med_reader"),
-                        new Claim(Constants.ClaimTypes.FamilyName, "ma_med_reader")
+                        new Claim(Constants.ClaimTypes.GivenName, "med_reader"),
+                        new Claim(Constants.ClaimTypes.FamilyName, "med_reader")
                     }
                 },
                 new InMemoryUser
                 {
-                    Username = "ma_med_reader_writer",
+                    Username = "med_reader_writer",
                     Password = "secret",
-                    Subject = "ma_med_reader_writer_id",
+                    Subject = "med_reader_writer_id",
                 },
                 new InMemoryUser
                 {

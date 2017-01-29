@@ -28,10 +28,10 @@ namespace KpServerApp
         {
             var client = new TokenClient(
                 identityServerConnectTokenUrl,
-                "ma_med_reader",
+                "med_reader",
                 "21B5F798-BE55-42BC-8AA8-0025B903DC3B");
 
-            return client.RequestResourceOwnerPasswordAsync("ma_med_reader", "secret", "cidm_permissions.read, common_menu.read, med.read").Result;
+            return client.RequestResourceOwnerPasswordAsync("med_reader", "secret", "cidm_permissions.read, common_menu.read, med.read").Result;
         }
     }
 }
