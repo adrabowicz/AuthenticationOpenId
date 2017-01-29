@@ -65,6 +65,7 @@ namespace Configuration
                     {
                         "cidm_permissions.read", "common_menu.read", "med.read", "infusion.read"
                     }
+                }
             };
         }
     }
