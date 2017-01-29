@@ -46,7 +46,25 @@ namespace Configuration
                     {
                         "cidm_permissions.read", "common_menu.read", "med.read", "med.readwrite"
                     }
-                }
+                },
+                new Client
+                {
+                    ClientName = "Benchmarking",
+                    ClientId = "benchmarking",
+                    Enabled = true,
+                    AccessTokenType = AccessTokenType.Reference,
+
+                    Flow = Flows.ResourceOwner,
+
+                    ClientSecrets = new List<Secret>
+                    {
+                        new Secret("C9195B0E-E5B1-4ADE-A650-DB86322BB7A2".Sha256())
+                    },
+
+                    AllowedScopes = new List<string>
+                    {
+                        "cidm_permissions.read", "common_menu.read", "med.read", "infusion.read"
+                    }
             };
         }
     }
