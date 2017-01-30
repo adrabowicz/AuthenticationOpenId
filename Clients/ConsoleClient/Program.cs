@@ -31,7 +31,7 @@ namespace KpServerApp
                 "med_reader",
                 "21B5F798-BE55-42BC-8AA8-0025B903DC3B");
 
-            return client.RequestResourceOwnerPasswordAsync("med_reader", "secret", "cidm_permissions.read, common_menu.read, med.read").Result;
+            return client.RequestResourceOwnerPasswordAsync("med_reader", "secret", "cidm_permissions.read, common_menu.read, med_data.read").Result;
         }
     }
 }

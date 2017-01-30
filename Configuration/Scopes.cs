@@ -23,11 +23,11 @@ namespace Configuration
                 },
                 new Scope
                 {
-                    Name = "med.read"
+                    Name = "med_data.read"
                 },
                 new Scope
                 {
-                    Name = "med.readwrite"
+                    Name = "med_data.readwrite"
                 },
                 new Scope
                 {

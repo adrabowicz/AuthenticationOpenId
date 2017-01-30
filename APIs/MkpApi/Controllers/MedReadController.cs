@@ -4,7 +4,7 @@ using Thinktecture.IdentityModel.WebApi;
 namespace MkpApi.Controllers
 {
     [Route("test")]
-    [ScopeAuthorize("infusion.read")]
+    [ScopeAuthorize("med_data.read")]
     public class MedReadController : ApiController
     {
         public IHttpActionResult Get()
