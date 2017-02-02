@@ -24,8 +24,15 @@ namespace KpServerApp
         {
             var client = new HttpClient();
             client.SetBearerToken(response.AccessToken);
-            var result = client.GetStringAsync(apiUrl).Result;
-            Console.WriteLine(result);
+            try
+            {
+                var result = client.GetStringAsync(apiUrl).Result;
+                Console.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
 
         static TokenResponse GetClientToken(string identityServerConnectTokenUrl)
