@@ -3,7 +3,7 @@ using System.Security.Claims;
 using System.Web.Http;
 using Thinktecture.IdentityModel.WebApi;
 
-namespace AMkpApipis
+namespace MkpApi.Controllers
 {
     [Route("test")]
     [ScopeAuthorize("infusion_data.read")]

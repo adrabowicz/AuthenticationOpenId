@@ -1,7 +1,7 @@
 ﻿using System.Security.Claims;
 using System.Web.Http;
 
-namespace CidmApi.Controllers
+namespace CommonApi.Controllers
 {
     [Route("test")]
     public class TestController : ApiController

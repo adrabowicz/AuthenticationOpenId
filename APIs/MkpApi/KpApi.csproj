@@ -155,6 +155,7 @@
   <ItemGroup>
     <Compile Include="Controllers\MedReadWriteController.cs" />
     <Compile Include="Controllers\MedReadController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Controllers\InfusionReadController.cs" />
