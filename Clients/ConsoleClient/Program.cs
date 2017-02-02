@@ -24,18 +24,18 @@ namespace KpServerApp
         {
             var client = new HttpClient();
             client.SetBearerToken(response.AccessToken);
-
-            Console.WriteLine(client.GetStringAsync(apiUrl).Result);
+            var result = client.GetStringAsync(apiUrl).Result;
+            Console.WriteLine(result);
         }
 
         static TokenResponse GetClientToken(string identityServerConnectTokenUrl)
         {
             var client = new TokenClient(
                 identityServerConnectTokenUrl,
-                "Kp-Server-Machine",
+                "idm",
                 "F621F470-9731-4A25-80EF-67A6F7C5F4B8");
 
-            return client.RequestClientCredentialsAsync("aegis.read").Result;
+            return client.RequestClientCredentialsAsync("cidm_identity.read").Result;
         }
 
         static TokenResponse GetUserToken(string identityServerConnectTokenUrl)
