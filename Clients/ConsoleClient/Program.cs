@@ -9,8 +9,13 @@ namespace KpServerApp
     {
         static void Main(string[] args)
         {
+            // request the access token using the client credentials
+            var response = GetClientToken(Config.IdentityServerConnectTokenIP);
+            // call the API using the access token
+            CallApi(response, Config.CidmApiTestIp);
+
             // request an access token on behalf of a user
-            var response = GetUserToken(Config.IdentityServerConnectTokenIP);
+            response = GetUserToken(Config.IdentityServerConnectTokenIP);
             // call the API using the access token
             CallApi(response, Config.KpApiTestIP);
         }
@@ -22,7 +27,16 @@ namespace KpServerApp
 
             Console.WriteLine(client.GetStringAsync(apiUrl).Result);
         }
-        
+
+        static TokenResponse GetClientToken(string identityServerConnectTokenUrl)
+        {
+            var client = new TokenClient(
+                identityServerConnectTokenUrl,
+                "Kp-Server-Machine",
+                "F621F470-9731-4A25-80EF-67A6F7C5F4B8");
+
+            return client.RequestClientCredentialsAsync("aegis.read").Result;
+        }
 
         static TokenResponse GetUserToken(string identityServerConnectTokenUrl)
         {

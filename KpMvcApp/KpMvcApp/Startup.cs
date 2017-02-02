@@ -34,9 +34,9 @@ namespace KpMvcApp
 
             app.UseOpenIdConnectAuthentication(new OpenIdConnectAuthenticationOptions
             {
-                Authority = Config.IdentityServerIdentityIp,
+                Authority = Config.IdentityServerIdentityIP,
                 ClientId = "KP-BrowserUser",
-                RedirectUri = Config.KpMvcAppBaseIp,
+                RedirectUri = Config.KpMvcAppBaseIP,
                 ResponseType = "id_token",
 
                 SignInAsAuthenticationType = "Cookies"
