@@ -26,7 +26,7 @@ namespace CidmApi
             // map the attribute-defined routes for the application
             config.MapHttpAttributeRoutes();
             // require authentication for all controllers
-           // config.Filters.Add(new AuthorizeAttribute());
+            // config.Filters.Add(new AuthorizeAttribute());
 
             // plug OWIN middleware component for WebApi into the pipeline
             app.UseWebApi(config);
