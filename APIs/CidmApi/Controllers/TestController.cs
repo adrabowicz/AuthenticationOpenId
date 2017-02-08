@@ -10,14 +10,12 @@ namespace CidmApi.Controllers
         {
             var caller = User as ClaimsPrincipal;
 
-            if (caller == null) {
-                return Ok();
-            }
+            var clientId = caller.FindFirst("client_id");
 
             return Json(new
             {
                 message = "OK computer",
-                client = caller.FindFirst("client_id").Value
+                client = clientId == null ? "undefined" : caller.FindFirst("client_id").Value
             });
         }
     }
