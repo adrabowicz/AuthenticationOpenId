@@ -44,7 +44,7 @@ namespace Configuration
 
                     AllowedScopes = new List<string>
                     {
-                        "cidm_permissions.read", "common_menu.read", "med_data.read", "med_data.readwrite"
+                        "common_menu.read", "med_data.read", "med_data.write"
                     }
                 },
                 new Client
@@ -63,7 +63,7 @@ namespace Configuration
 
                     AllowedScopes = new List<string>
                     {
-                        "cidm_permissions.read", "common_menu.read", "med_data.read", "infusion_data.read"
+                        "common_menu.read", "med_data.read", "infusion_data.read"
                     }
                 }
             };

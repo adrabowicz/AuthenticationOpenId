@@ -27,7 +27,7 @@ namespace Configuration
                 },
                 new Scope
                 {
-                    Name = "med_data.readwrite"
+                    Name = "med_data.write"
                 },
                 new Scope
                 {
