@@ -3,11 +3,11 @@ using Thinktecture.IdentityModel.WebApi;
 
 namespace CidmApi.Controllers
 {
-    [Route("test")]
     [ScopeAuthorize("cidm_permissions.read")]
     public class PermissionsReadController : ApiController
     {
-        public IHttpActionResult Get()
+        [Route("permissions")]
+        public IHttpActionResult GetPermissions()
         {
             return Ok();
         }

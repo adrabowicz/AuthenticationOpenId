@@ -153,7 +153,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\MedReadWriteController.cs" />
+    <Compile Include="Controllers\MedWriteController.cs" />
     <Compile Include="Controllers\MedReadController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

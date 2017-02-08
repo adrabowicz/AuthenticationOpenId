@@ -3,11 +3,11 @@ using Thinktecture.IdentityModel.WebApi;
 
 namespace CommonApi.Controllers
 {
-    [Route("test")]
     [ScopeAuthorize("common_menu.read")]
     class MenuReadController : ApiController
     {
-        public IHttpActionResult Get()
+        [Route("menu")]
+        public IHttpActionResult GetCommonMenu()
         {
             return Ok();
         }

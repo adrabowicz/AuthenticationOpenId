@@ -3,10 +3,10 @@ using Thinktecture.IdentityModel.WebApi;
 
 namespace MkpApi.Controllers
 {
-    [Route("test")]
-    [ScopeAuthorize("med_data.read")]
-    public class MedReadWriteController : ApiController
+    [ScopeAuthorize("med_data.write")]
+    public class MedWriteController : ApiController
     {
+        [Route("inventory-data")]
         public IHttpActionResult Get()
         {
             return Ok();
