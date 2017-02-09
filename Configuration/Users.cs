@@ -14,7 +14,7 @@ namespace Configuration
             {
                 new InMemoryUser
                 {
-                    Username = "med_reader",
+                    Username = "bob_med_reader",
                     Password = "secret",
                     Subject = "med_reader_id",
 

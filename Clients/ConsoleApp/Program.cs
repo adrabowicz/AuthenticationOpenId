@@ -17,10 +17,10 @@ namespace ConsoleApp
         {
             var client = new TokenClient(
                 "http://localhost:5000/connect/token",
-                "med_data_service",
-                "C307B573-1B25-4DF5-8AC7-E7f25A43C229");
+                "ma_app",
+               "21B5F798-BE55-42BC-8AA8-0025B903DC3B");
 
-            return client.RequestClientCredentialsAsync("cidm_permissions.read").Result;
+            return client.RequestResourceOwnerPasswordAsync("bob_med_reader", "secret", "med_data.read").Result;
         }
 
         private static void CallApi(TokenResponse response)
@@ -28,7 +28,8 @@ namespace ConsoleApp
             var client = new HttpClient();
             client.SetBearerToken(response.AccessToken);
 
-            Console.WriteLine(client.GetStringAsync(Config.CidmApiBaseIP + "/permissions").Result);
+            var url = Config.KpApiBaseIP + "/med-data-read";
+            Console.WriteLine(client.GetStringAsync(url).Result);
         }
     }
 }

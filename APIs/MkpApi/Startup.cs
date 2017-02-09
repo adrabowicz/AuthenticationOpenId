@@ -14,9 +14,9 @@ namespace MkpApi
             var tokenAuthenticationOptions = new IdentityServerBearerTokenAuthenticationOptions
             {
                 Authority = Config.IdentityServerBaseIP,
-                ValidationMode = ValidationMode.ValidationEndpoint,
+                ValidationMode = ValidationMode.ValidationEndpoint//,
 
-                RequiredScopes = new[] { "med_data.read", "med_data.write" }
+        //        RequiredScopes = new[] { "med_data.read", "med_data.write" }
             };
 
             // plug OWIN middleware component for token authentication into the pipeline
@@ -29,20 +29,10 @@ namespace MkpApi
             // require authentication for all controllers
             config.Filters.Add(new AuthorizeAttribute());
 
-            GetClientToken();
-
             // plug OWIN middleware component for WebApi into the pipeline
             app.UseWebApi(config);
         }
 
-        private static TokenResponse GetClientToken()
-        {
-            var client = new TokenClient(
-                "http://localhost:5000/connect/token",
-                "med_data_service",
-                "C307B573-1B25-4DF5-8AC7-E7f25A43C229");
 
-            return client.RequestClientCredentialsAsync("cidm_permissions.read").Result;
-        }
     }
 }

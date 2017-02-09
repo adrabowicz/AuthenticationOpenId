@@ -15,7 +15,7 @@ namespace Configuration
         public static string CommonApiBaseIP = Protocol + "localhost:42002";
         public static string CommonApiTestIP = CommonApiBaseIP + "/test";
 
-        public static string KpApiBaseIP = Protocol + "localhost:42003/";
+        public static string KpApiBaseIP = Protocol + "localhost:42003";
         public static string KpApiTestIP = KpApiBaseIP + "/test";
 
         public const string KpMvcAppBaseIP = "https://localhost:44375/";
