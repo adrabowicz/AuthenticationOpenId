@@ -1,5 +1,6 @@
 ﻿using System.Web.Http;
 using Owin;
+using IdentityModel.Client;
 using IdentityServer3.AccessTokenValidation;
 using Configuration;
 
@@ -28,8 +29,20 @@ namespace MkpApi
             // require authentication for all controllers
             config.Filters.Add(new AuthorizeAttribute());
 
+            GetClientToken();
+
             // plug OWIN middleware component for WebApi into the pipeline
             app.UseWebApi(config);
+        }
+
+        private static TokenResponse GetClientToken()
+        {
+            var client = new TokenClient(
+                "http://localhost:5000/connect/token",
+                "med_data_service",
+                "C307B573-1B25-4DF5-8AC7-E7f25A43C229");
+
+            return client.RequestClientCredentialsAsync("cidm_permissions.read").Result;
         }
     }
 }

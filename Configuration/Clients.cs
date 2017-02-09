@@ -11,8 +11,8 @@ namespace Configuration
             {
                 new Client
                 {
-                    ClientName = "IDM",
-                    ClientId = "idm",
+                    ClientName = "IDM Service",
+                    ClientId = "idm_service",
                     Enabled = true,
                     AccessTokenType = AccessTokenType.Reference,
 
@@ -30,8 +30,46 @@ namespace Configuration
                 },
                 new Client
                 {
-                    ClientName = "MA",
-                    ClientId = "ma",
+                    ClientName = "Common Menu Service",
+                    ClientId = "common_menu_service",
+                    Enabled = true,
+                    AccessTokenType = AccessTokenType.Reference,
+
+                    Flow = Flows.ClientCredentials,
+
+                    ClientSecrets = new List<Secret>
+                    {
+                        new Secret("E901482E-8284-4A6B-889C-F40978934C89".Sha256())
+                    },
+
+                    AllowedScopes = new List<string>
+                    {
+                        "cidm_permissions.read"
+                    }
+                },
+                new Client
+                {
+                    ClientName = "Med Data Service",
+                    ClientId = "med_data_service",
+                    Enabled = true,
+                    AccessTokenType = AccessTokenType.Reference,
+
+                    Flow = Flows.ClientCredentials,
+
+                    ClientSecrets = new List<Secret>
+                    {
+                        new Secret("C307B573-1B25-4DF5-8AC7-E7f25A43C229".Sha256())
+                    },
+
+                    AllowedScopes = new List<string>
+                    {
+                        "cidm_permissions.read"
+                    }
+                },
+                new Client
+                {
+                    ClientName = "MA App",
+                    ClientId = "ma_app",
                     Enabled = true,
                     AccessTokenType = AccessTokenType.Reference,
 
@@ -44,13 +82,13 @@ namespace Configuration
 
                     AllowedScopes = new List<string>
                     {
-                        "common_menu.read", "med_data.read", "med_data.write"
+                        "common_menu.read", "med_data.read"
                     }
                 },
                 new Client
                 {
-                    ClientName = "Benchmarking",
-                    ClientId = "benchmarking",
+                    ClientName = "Benchmarking App",
+                    ClientId = "benchmarking_app",
                     Enabled = true,
                     AccessTokenType = AccessTokenType.Reference,
 
