@@ -2,6 +2,8 @@
 using System.Web.Http;
 using IdentityModel.Client;
 using Thinktecture.IdentityModel.WebApi;
+using System.Net.Http;
+using Configuration;
 
 namespace MkpApi.Controllers
 {
@@ -14,33 +16,30 @@ namespace MkpApi.Controllers
             var caller = User as ClaimsPrincipal;
 
             var subjectClaim = caller.FindFirst("sub");
-            if (subjectClaim != null)
+            if (subjectClaim == null)
             {
-                return Json(new
-                {
-                    message = "OK user",
-                    client = caller.FindFirst("client_id").Value,
-                    subject = subjectClaim.Value
-                });
+                return Unauthorized();
             }
-            else
+
+            var userId = subjectClaim.Value;
+
+            var userAegisPermissions = Config.GetUserAegisPermissions("med_data_service", "C307B573-1B25-4DF5-8AC7-E7f25A43C229", userId);
+
+            var authorized = AuthorizeResourceAccess(userAegisPermissions);
+
+            if (!authorized)
             {
-                return Json(new
-                {
-                    message = "OK computer",
-                    client = caller.FindFirst("client_id").Value
-                });
+                return Unauthorized();
             }
+
+            // access med data
+
+            return Ok("med data");
         }
 
-        private static TokenResponse GetClientToken()
+        private static bool AuthorizeResourceAccess(string userAegisPermissions)
         {
-            var client = new TokenClient(
-                "http://localhost:5000/connect/token",
-                "med_data_service",
-                "C307B573-1B25-4DF5-8AC7-E7f25A43C229");
-
-            return client.RequestClientCredentialsAsync("cidm_permissions.read").Result;
+            return true;
         }
     }
 }

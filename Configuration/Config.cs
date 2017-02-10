@@ -1,4 +1,6 @@
-﻿
+﻿using System.Net.Http;
+using IdentityModel.Client;
+
 namespace Configuration
 {
     public static class Config
@@ -19,5 +21,22 @@ namespace Configuration
         public static string KpApiTestIP = KpApiBaseIP + "/test";
 
         public const string KpMvcAppBaseIP = "https://localhost:44375/";
+
+        public static string GetUserAegisPermissions(string clientName, string clientSecret, string UserId)
+        {
+            var tokenClient = new TokenClient(
+                "http://localhost:5000/connect/token",
+                clientName,
+                clientSecret);
+
+            var response = tokenClient.RequestClientCredentialsAsync("cidm_permissions.read").Result;
+
+            var client = new HttpClient();
+            client.SetBearerToken(response.AccessToken);
+
+            var url = CidmApiBaseIP + "/permissions";
+            var aegisPermissions = client.GetStringAsync(url).Result;
+            return aegisPermissions;
+        }
     }
 }
