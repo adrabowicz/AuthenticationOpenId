@@ -22,7 +22,7 @@ namespace Configuration
 
         public const string KpMvcAppBaseIP = "https://localhost:44375/";
 
-        public static string GetUserAegisPermissions(string clientName, string clientSecret, string UserId)
+        public static string GetUserAegisPermissions(string clientName, string clientSecret, string userId)
         {
             var tokenClient = new TokenClient(
                 "http://localhost:5000/connect/token",
@@ -34,7 +34,7 @@ namespace Configuration
             var client = new HttpClient();
             client.SetBearerToken(response.AccessToken);
 
-            var url = CidmApiBaseIP + "/permissions";
+            var url = CidmApiBaseIP + "/permissions/" + userId;
             var aegisPermissions = client.GetStringAsync(url).Result;
             return aegisPermissions;
         }
