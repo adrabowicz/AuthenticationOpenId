@@ -28,7 +28,7 @@ namespace ConsoleApp
             var client = new HttpClient();
             client.SetBearerToken(response.AccessToken);
 
-            var url = Config.KpApiBaseIP + "/med-data";
+            var url = Config.KpApiBaseIP + "/med-data/15";
             Console.WriteLine(client.GetStringAsync(url).Result);
         }
     }
