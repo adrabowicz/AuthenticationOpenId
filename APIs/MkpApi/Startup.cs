@@ -1,6 +1,5 @@
 ﻿using System.Web.Http;
 using Owin;
-using IdentityModel.Client;
 using IdentityServer3.AccessTokenValidation;
 using Configuration;
 
@@ -14,9 +13,9 @@ namespace MkpApi
             var tokenAuthenticationOptions = new IdentityServerBearerTokenAuthenticationOptions
             {
                 Authority = Config.IdentityServerBaseIP,
-                ValidationMode = ValidationMode.ValidationEndpoint//,
+                ValidationMode = ValidationMode.ValidationEndpoint,
 
-        //        RequiredScopes = new[] { "med_data.read", "med_data.write" }
+                RequiredScopes = new[] { "med_data.read", "med_data.write" }
             };
 
             // plug OWIN middleware component for token authentication into the pipeline

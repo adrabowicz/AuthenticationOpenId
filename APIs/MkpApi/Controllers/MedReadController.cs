@@ -7,10 +7,10 @@ using Configuration;
 
 namespace MkpApi.Controllers
 {
-  //  [ScopeAuthorize("med_data.read")]
+    [ScopeAuthorize("med_data.read")]
     public class MedReadController : ApiController
     {
-        [Route("med-data-read")]
+        [Route("med-data")]
         public IHttpActionResult Get()
         {
             var caller = User as ClaimsPrincipal;

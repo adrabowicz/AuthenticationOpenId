@@ -9,7 +9,7 @@ namespace CidmApi.Controllers
         [Route("permissions")]
         public IHttpActionResult GetPermissions()
         {
-            return Ok();
+            return Ok("AEGIS permissions");
         }
     }
 }
