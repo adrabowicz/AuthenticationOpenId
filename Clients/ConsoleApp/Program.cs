@@ -9,26 +9,22 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            var response = GetClientToken();
-            CallApi(response);
+            // get med data
+            var accessToken = GetAccessToken("ma_app", "21B5F798-BE55-42BC-8AA8-0025B903DC3B", "med_data.read");
+            var url = Config.KpApiBaseIP + "/med-data/15";
+            CallApi(accessToken, url);
         }
 
-        private static TokenResponse GetClientToken()
+        private static string GetAccessToken(string clientId, string clientSecret, string scope)
         {
-            var client = new TokenClient(
-                "http://localhost:5000/connect/token",
-                "ma_app",
-               "21B5F798-BE55-42BC-8AA8-0025B903DC3B");
-
-            return client.RequestResourceOwnerPasswordAsync("bob_med_reader", "secret", "med_data.read").Result;
+            var client = new TokenClient("http://localhost:5000/connect/token", clientId, clientSecret);
+            return client.RequestResourceOwnerPasswordAsync("bob_med_reader", "secret", scope).Result.AccessToken;
         }
 
-        private static void CallApi(TokenResponse response)
+        private static void CallApi(string accessToken, string url)
         {
             var client = new HttpClient();
-            client.SetBearerToken(response.AccessToken);
-
-            var url = Config.KpApiBaseIP + "/med-data/15";
+            client.SetBearerToken(accessToken);
             Console.WriteLine(client.GetStringAsync(url).Result);
         }
     }
