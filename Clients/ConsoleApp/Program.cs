@@ -10,9 +10,16 @@ namespace ConsoleApp
         static void Main(string[] args)
         {
             // get med data
+            //var accessToken = GetAccessToken("ma_app", "21B5F798-BE55-42BC-8AA8-0025B903DC3B", "common_menu.read");
+            //var url = Config.CommonApiBaseIP + "/menu/ma_app";
+            //var result = CallApi(accessToken, url);
+            //Console.WriteLine(result);
+
+            // get med data
             var accessToken = GetAccessToken("ma_app", "21B5F798-BE55-42BC-8AA8-0025B903DC3B", "med_data.read");
             var url = Config.KpApiBaseIP + "/med-data/15";
-            CallApi(accessToken, url);
+            var result = CallApi(accessToken, url);
+            Console.WriteLine(result);
         }
 
         private static string GetAccessToken(string clientId, string clientSecret, string scope)
@@ -21,11 +28,11 @@ namespace ConsoleApp
             return client.RequestResourceOwnerPasswordAsync("bob_med_reader", "secret", scope).Result.AccessToken;
         }
 
-        private static void CallApi(string accessToken, string url)
+        private static string CallApi(string accessToken, string url)
         {
             var client = new HttpClient();
             client.SetBearerToken(accessToken);
-            Console.WriteLine(client.GetStringAsync(url).Result);
+            return client.GetStringAsync(url).Result;
         }
     }
 }

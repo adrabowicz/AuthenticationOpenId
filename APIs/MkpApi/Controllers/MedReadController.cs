@@ -1,8 +1,6 @@
 ﻿using System.Security.Claims;
 using System.Web.Http;
-using IdentityModel.Client;
 using Thinktecture.IdentityModel.WebApi;
-using System.Net.Http;
 using Configuration;
 
 namespace MkpApi.Controllers
