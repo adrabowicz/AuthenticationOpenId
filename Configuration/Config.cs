@@ -22,7 +22,7 @@ namespace Configuration
 
         public const string KpMvcAppBaseIP = "https://localhost:44375/";
 
-        public static string GetUserAegisPermissions(string clientName, string clientSecret, string userId)
+        public static string GetUserPermissionsFromCidm(string clientName, string clientSecret, string userId)
         {
             var tokenClient = new TokenClient(
                 "http://localhost:5000/connect/token",

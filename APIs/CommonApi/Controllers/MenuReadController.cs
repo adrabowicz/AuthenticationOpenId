@@ -21,7 +21,7 @@ namespace CommonApi.Controllers
 
             var userId = subjectClaim.Value;
 
-            var userAegisPermissions = Config.GetUserAegisPermissions("med_data_service", "C307B573-1B25-4DF5-8AC7-E7f25A43C229", userId);
+            var userAegisPermissions = Config.GetUserPermissionsFromCidm(clientName: "med_data_service", clientSecret: "C307B573-1B25-4DF5-8AC7-E7f25A43C229", userId: userId);
 
             // retrieve menu data for appId
 
