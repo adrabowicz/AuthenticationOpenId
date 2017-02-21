@@ -6,7 +6,7 @@ using Configuration;
 namespace CommonApi.Controllers
 {
     [ScopeAuthorize("common_menu.read")]
-    class MenuReadController : ApiController
+    public class MenuReadController : ApiController
     {
         [Route("menu/{appId}")]
         public IHttpActionResult GetCommonMenu(string appId)
