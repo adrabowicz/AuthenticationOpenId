@@ -25,7 +25,7 @@ namespace CommonApi.Controllers
 
             // retrieve menu data for appId
 
-            return Ok("menus, IDNs, hospitals");
+            return Ok("lists of menus, list of IDNs, list of hospitals");
         }
     }
 }
