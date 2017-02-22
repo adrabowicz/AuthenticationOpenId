@@ -9,7 +9,7 @@ namespace CidmApi.Controllers
         [Route("permissions/{userId}")]
         public IHttpActionResult GetPermissions(string userId)
         {
-            // get permissions from AEGIS dataabse
+            // get permissions from AEGIS database
 
             return Ok("AEGIS permissions");
         }
