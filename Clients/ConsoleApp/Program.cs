@@ -24,17 +24,17 @@ namespace ConsoleApp
             Console.Read();
         }
 
+        private static string GetAccessToken(string clientId, string clientSecret, string scope)
+        {
+            var client = new TokenClient("http://localhost:5000/connect/token", clientId, clientSecret);
+            return client.RequestResourceOwnerPasswordAsync("bob_med_reader", "secret", scope).Result.AccessToken;
+        }
+
         private static string MakeApiCallToGetData(string accessToken, string url)
         {
             var client = new HttpClient();
             client.SetBearerToken(accessToken);
             return client.GetStringAsync(url).Result;
-        }
-
-        private static string GetAccessToken(string clientId, string clientSecret, string scope)
-        {
-            var client = new TokenClient("http://localhost:5000/connect/token", clientId, clientSecret);
-            return client.RequestResourceOwnerPasswordAsync("bob_med_reader", "secret", scope).Result.AccessToken;
         }
     }
 }

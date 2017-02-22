@@ -23,7 +23,7 @@ namespace CommonApi.Controllers
 
             var userAegisPermissions = Config.GetUserPermissionsFromCidm(clientName: "med_data_service", clientSecret: "C307B573-1B25-4DF5-8AC7-E7f25A43C229", userId: userId);
 
-            // retrieve menu data for appId
+            // retrieve menu data for application with id: appId
 
             return Ok("lists of menus, list of IDNs, list of hospitals");
         }
