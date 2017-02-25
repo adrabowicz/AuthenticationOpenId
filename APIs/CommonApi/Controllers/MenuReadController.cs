@@ -1,5 +1,4 @@
-﻿using System.Security.Claims;
-using System.Web.Http;
+﻿using System.Web.Http;
 using Thinktecture.IdentityModel.WebApi;
 using Configuration;
 
@@ -17,7 +16,7 @@ namespace CommonApi.Controllers
                 return Unauthorized();
             }
 
-            var userAegisPermissions = Config.GetUserPermissionsFromCidm(clientName: "med_data_service", clientSecret: "C307B573-1B25-4DF5-8AC7-E7f25A43C229", userId: userId);
+            var userAegisPermissions = GetUserPermissionsFromCidm(clientName: "med_data_service", clientSecret: "C307B573-1B25-4DF5-8AC7-E7f25A43C229", userId: userId);
 
             // retrieve menu data for application with id: appId
 
