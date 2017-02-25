@@ -27,7 +27,8 @@ namespace ConsoleApp
         private static string GetAccessToken(string clientId, string clientSecret, string scope)
         {
             var client = new TokenClient("http://localhost:5000/connect/token", clientId, clientSecret);
-            return client.RequestResourceOwnerPasswordAsync("bob_med_reader", "secret", scope).Result.AccessToken;
+            var response = client.RequestResourceOwnerPasswordAsync("bob_med_reader", "secret", scope).Result;
+            return response.AccessToken;
         }
 
         private static string MakeApiCallToGetData(string accessToken, string url)
