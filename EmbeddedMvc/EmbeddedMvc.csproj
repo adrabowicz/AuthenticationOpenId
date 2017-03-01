@@ -231,7 +231,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>57634</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44393/</IISUrl>
+          <IISUrl>https://localhost:44319/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
