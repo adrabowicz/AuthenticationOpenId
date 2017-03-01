@@ -11,6 +11,21 @@ namespace Configuration
             {
                 new Client
                 {
+                    ClientName = "MVC Client",
+                    ClientId = "mvc",
+                    Enabled = true,
+
+                    Flow = Flows.Implicit,
+
+                    RedirectUris = new List<string>
+                    {
+                        "https://localhost:44319/"
+                    },
+
+                    AllowAccessToAllScopes = true
+                },
+                new Client
+                {
                     ClientName = "IDM Service",
                     ClientId = "idm_service",
                     Enabled = true,
