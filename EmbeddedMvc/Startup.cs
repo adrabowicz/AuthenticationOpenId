@@ -13,6 +13,8 @@ namespace EmbeddedMvc
     {
         public void Configuration(IAppBuilder app)
         {
+            // if the request path starts with "/identity", execute the app configured via configuration parameter 
+            // instead of continuing to the next component in the pipeline
             app.Map("/identity", idsrvApp =>
             {
                 idsrvApp.UseIdentityServer(new IdentityServerOptions
@@ -27,11 +29,15 @@ namespace EmbeddedMvc
                 });
             });
 
+            // configure OWIN middleware
+            // OWIN middleware sits in the pipeline and operates independently, has no knowledge of MVC
+            // configured using IAppBuilder
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationType = "Cookies"
             });
 
+            // do things related to OpenID Connect flows
             app.UseOpenIdConnectAuthentication(new OpenIdConnectAuthenticationOptions
             {
                 Authority = "https://localhost:44319/identity",
