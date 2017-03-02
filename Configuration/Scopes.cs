@@ -7,7 +7,7 @@ namespace Configuration
     {
         public static List<Scope> Get()
         {
-            return new List<Scope>
+            var scopes = new List<Scope>
             {
                 new Scope
                 {
@@ -32,8 +32,22 @@ namespace Configuration
                 new Scope
                 {
                     Name = "infusion.read"
+                },
+                new Scope
+                {
+                    Enabled = true,
+                    Name = "roles",
+                    Type = ScopeType.Identity,
+                    Claims = new List<ScopeClaim>
+                    {
+                        new ScopeClaim("role")
+                    }
                 }
             };
+
+            scopes.AddRange(StandardScopes.All);
+
+            return scopes;
         }
     }
 }

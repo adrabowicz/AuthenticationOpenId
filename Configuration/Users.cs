@@ -26,9 +26,16 @@ namespace Configuration
                 },
                 new InMemoryUser
                 {
-                    Username = "med_reader_writer",
+                    Username = "bob",
                     Password = "secret",
-                    Subject = "med_reader_writer_id",
+                    Subject = "1",
+                    Claims = new[]
+                    {
+                        new Claim(Constants.ClaimTypes.GivenName, "Bob"),
+                        new Claim(Constants.ClaimTypes.FamilyName, "Smith"),
+                        new Claim(Constants.ClaimTypes.Role, "Geek"),
+                        new Claim(Constants.ClaimTypes.Role, "Foo")
+                    }
                 },
                 new InMemoryUser
                 {

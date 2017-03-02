@@ -25,7 +25,7 @@ namespace EmbeddedMvc
                     Factory = new IdentityServerServiceFactory()
                                 .UseInMemoryUsers(Users.Get())
                                 .UseInMemoryClients(Clients.Get())
-                                .UseInMemoryScopes(StandardScopes.All)
+                                .UseInMemoryScopes(Scopes.Get())
                 });
             });
 
@@ -42,6 +42,7 @@ namespace EmbeddedMvc
             {
                 Authority = "https://localhost:44319/identity",
                 ClientId = "mvc",
+                Scope = "openid profile roles",
                 RedirectUri = "https://localhost:44319/",
                 ResponseType = "id_token",
 
