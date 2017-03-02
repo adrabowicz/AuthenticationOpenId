@@ -50,6 +50,7 @@ namespace EmbeddedMvc
                 AuthenticationType = "Cookies"
             });
 
+            // claims transformation
             var notifications = new OpenIdConnectAuthenticationNotifications
             {
                 SecurityTokenValidated = n =>
