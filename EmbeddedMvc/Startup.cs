@@ -29,7 +29,7 @@ namespace EmbeddedMvc
             // instead of continuing to the next component in the pipeline
             app.Map("/identity", idsrvApp =>
             {
-                idsrvApp.UseIdentityServer(new IdentityServerOptions
+                var options = new IdentityServerOptions
                 {
                     SiteName = "Embedded IdentityServer",
                     SigningCertificate = LoadCertificate(),
@@ -38,7 +38,8 @@ namespace EmbeddedMvc
                                 .UseInMemoryUsers(Users.Get())
                                 .UseInMemoryClients(Clients.Get())
                                 .UseInMemoryScopes(Scopes.Get())
-                });
+                };
+                idsrvApp.UseIdentityServer(options);
             });
 
             // configure OWIN middleware
