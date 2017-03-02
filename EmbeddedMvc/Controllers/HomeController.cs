@@ -13,7 +13,9 @@ namespace EmbeddedMvc.Controllers
         [Authorize]
         public ActionResult About()
         {
-            return View((User as ClaimsPrincipal).Claims);
+            var user = User as ClaimsPrincipal;
+            var claims = user.Claims;
+            return View(claims);
         }
 
         public ActionResult Contact()
