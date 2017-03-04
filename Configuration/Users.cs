@@ -36,12 +36,6 @@ namespace Configuration
                         new Claim(Constants.ClaimTypes.Role, "Geek"),
                         new Claim(Constants.ClaimTypes.Role, "Foo")
                     }
-                },
-                new InMemoryUser
-                {
-                    Username = "bemchmarking_med_infusion_reader",
-                    Password = "secret",
-                    Subject = "bemchmarking_med_infusion_reader_id",
                 }
             };
         }
