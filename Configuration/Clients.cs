@@ -26,6 +26,21 @@ namespace Configuration
                 },
                 new Client
                 {
+                    ClientName = "MVC App",
+                    ClientId = "mvc_app",
+                    Enabled = true,
+
+                    Flow = Flows.Implicit,
+
+                    RedirectUris = new List<string>
+                    {
+                        ConfigSSL.MvcAppBaseIP
+                    },
+
+                    AllowAccessToAllScopes = true
+                },
+                new Client
+                {
                     ClientName = "IDM Service",
                     ClientId = "idm_service",
                     Enabled = true,

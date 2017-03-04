@@ -87,9 +87,9 @@ namespace EmbeddedMvc
             var openIdConnectOptions = new OpenIdConnectAuthenticationOptions
             {
                 Authority = "https://localhost:44319/identity",
-                ClientId = "mvc",
+                ClientId = "mvc_app",
                 Scope = "openid profile roles",
-                RedirectUri = "https://localhost:44319/",
+                RedirectUri = ConfigSSL.MvcAppBaseIP,
                 ResponseType = "id_token",
 
                 SignInAsAuthenticationType = "Cookies",
