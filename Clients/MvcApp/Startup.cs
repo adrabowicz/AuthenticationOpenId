@@ -1,4 +1,6 @@
-﻿using Owin;
+﻿using System.Collections.Generic;
+using System.IdentityModel.Tokens;
+using Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OpenIdConnect;
 using Configuration;
@@ -9,6 +11,9 @@ namespace MvcApp
     {
         public void Configuration(IAppBuilder app)
         {
+            // turn off mapping of claims to .NET ClaimTypes
+            JwtSecurityTokenHandler.InboundClaimTypeMap = new Dictionary<string, string>();
+
             // configure OWIN middleware
             // OWIN middleware sits in the pipeline and operates independently, has no knowledge of MVC
             // configured using IAppBuilder
