@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IdentityModel.Tokens;
-using System.Security.Claims;
-using System.Security.Cryptography.X509Certificates;
-using System.Web.Helpers;
-using System.Threading.Tasks;
-using Owin;
+﻿using Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OpenIdConnect;
-using Microsoft.Owin.Security;
-//using IdentityServer3.Core.Configuration;
-//using IdentityServer3.Core;
-//using Configuration;
+using Configuration;
 
 namespace MvcApp
 {
@@ -19,12 +9,6 @@ namespace MvcApp
     {
         public void Configuration(IAppBuilder app)
         {
-            //// turn off mapping of claims to .NET ClaimTypes
-            //JwtSecurityTokenHandler.InboundClaimTypeMap = new Dictionary<string, string>();
-
-            //// configuration for anti-CSRF protection
-            //AntiForgeryConfig.UniqueClaimTypeIdentifier = Constants.ClaimTypes.Subject;
-
             // configure OWIN middleware
             // OWIN middleware sits in the pipeline and operates independently, has no knowledge of MVC
             // configured using IAppBuilder
@@ -37,9 +21,9 @@ namespace MvcApp
             var openIdConnectOptions = new OpenIdConnectAuthenticationOptions
             {
                 Authority = "https://localhost:44319/identity",
-                ClientId = "mvc",
+                ClientId = "mvc_app",
                 Scope = "openid profile roles",
-                RedirectUri = "https://localhost:44319/",
+                RedirectUri = ConfigSSL.MvcAppBaseIP,
                 ResponseType = "id_token",
 
                 SignInAsAuthenticationType = "Cookies",
