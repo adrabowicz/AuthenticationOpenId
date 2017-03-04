@@ -1,6 +1,4 @@
-﻿using System.Net.Http;
-using IdentityModel.Client;
-
+﻿
 namespace Configuration
 {
     public static class Config

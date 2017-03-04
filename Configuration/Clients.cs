@@ -19,7 +19,7 @@ namespace Configuration
 
                     RedirectUris = new List<string>
                     {
-                        "https://localhost:44319/"
+                        ConfigSSL.EmbeddedMvcBaseIP
                     },
 
                     AllowAccessToAllScopes = true
