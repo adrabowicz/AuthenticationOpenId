@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IdentityModel.Tokens;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -54,8 +55,7 @@ namespace MVC_OWIN_Client
                                 "mvc.owin.hybrid",
                                 "secret");
 
-                            var tokenResponse = await tokenClient.RequestAuthorizationCodeAsync(
-                                n.Code, n.RedirectUri);
+                            var tokenResponse = await tokenClient.RequestAuthorizationCodeAsync(n.Code, n.RedirectUri);
 
                             if (tokenResponse.IsError)
                             {
@@ -63,9 +63,7 @@ namespace MVC_OWIN_Client
                             }
 
                             // use the access token to retrieve claims from userinfo
-                            var userInfoClient = new UserInfoClient(
-                            new Uri(Constants.UserInfoEndpoint),
-                            tokenResponse.AccessToken);
+                            var userInfoClient = new UserInfoClient(new Uri(Constants.UserInfoEndpoint), tokenResponse.AccessToken);
 
                             var userInfoResponse = await userInfoClient.GetAsync();
 
@@ -74,7 +72,7 @@ namespace MVC_OWIN_Client
                             id.AddClaims(userInfoResponse.GetClaimsIdentity().Claims);
 
                             id.AddClaim(new Claim("access_token", tokenResponse.AccessToken));
-                            id.AddClaim(new Claim("expires_at", DateTime.Now.AddSeconds(tokenResponse.ExpiresIn).ToLocalTime().ToString()));
+                            id.AddClaim(new Claim("expires_at", DateTime.Now.AddSeconds(tokenResponse.ExpiresIn).ToLocalTime().ToString(CultureInfo.InvariantCulture)));
                             id.AddClaim(new Claim("refresh_token", tokenResponse.RefreshToken));
                             id.AddClaim(new Claim("id_token", n.ProtocolMessage.IdToken));
                             id.AddClaim(new Claim("sid", n.AuthenticationTicket.Identity.FindFirst("sid").Value));
@@ -95,7 +93,6 @@ namespace MVC_OWIN_Client
                                 {
                                     n.ProtocolMessage.IdTokenHint = idTokenHint.Value;
                                 }
-
                             }
 
                             return Task.FromResult(0);
