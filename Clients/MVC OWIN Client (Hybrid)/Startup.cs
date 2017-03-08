@@ -31,8 +31,8 @@ namespace MVC_OWIN_Client
             {
                 ClientId = "mvc.owin.hybrid",
                 Authority = ConfigSSL.IdentityServerIdentityIP,
-                RedirectUri = "https://localhost:44300/",
-                PostLogoutRedirectUri = "https://localhost:44300/",
+                RedirectUri = ConfigSSL.MvcHybridAppBaseIP,
+                PostLogoutRedirectUri = ConfigSSL.MvcHybridAppBaseIP,
                 ResponseType = "code id_token",
                 Scope = "openid profile read write offline_access",
 
