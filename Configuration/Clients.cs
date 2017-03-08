@@ -19,7 +19,7 @@ namespace Configuration
 
                     RedirectUris = new List<string>
                     {
-                        ConfigSSL.EmbeddedMvcBaseIP
+                        ConfigSSL.IdentityServerBaseIP
                     },
 
                     AllowAccessToAllScopes = true
