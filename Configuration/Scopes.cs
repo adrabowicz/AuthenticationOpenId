@@ -11,6 +11,16 @@ namespace Configuration
             {
                 new Scope
                 {
+                    Name = "write",
+                    DisplayName = "Write User Data"
+                },
+                new Scope
+                {
+                    Name = "read",
+                    DisplayName = "Read User Data"
+                },
+                new Scope
+                {
                     Name = "cidm_identity.read"
                 },
                 new Scope

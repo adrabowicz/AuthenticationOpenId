@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using IdentityServer3.Core;
 using IdentityServer3.Core.Models;
 
 namespace Configuration
@@ -9,6 +10,35 @@ namespace Configuration
         {
             return new List<Client>
             {
+                 new Client
+                {
+                    Flow = Flows.Hybrid,
+                    ClientId = "MVCHybrid-MVD",
+                    ClientSecrets = new List<Secret>
+                    {
+                        new Secret("secret".Sha256())
+                    },
+                    ClientName = "MVD",
+                    AllowedScopes = new List<string>
+                    {
+                        Constants.StandardScopes.OpenId,
+                        Constants.StandardScopes.Profile,
+                        Constants.StandardScopes.OfflineAccess,
+                        "read",
+                        "write"
+                    },
+                    RedirectUris = new List<string>
+                    {
+                        ConfigSSL.MvcHybridAppBaseIP
+                    },
+                    PostLogoutRedirectUris = new List<string>
+                    {
+                       ConfigSSL.MvcHybridAppBaseIP
+                    },
+                    AccessTokenLifetime = 3600, // default 3600 seconds
+                    RequireConsent = false,
+                    Enabled = true
+                },
                 new Client
                 {
                     ClientName = "MVC Client",
