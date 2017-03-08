@@ -25,7 +25,7 @@ namespace MvcApp
             // do things related to OpenID Connect flows
             var openIdConnectOptions = new OpenIdConnectAuthenticationOptions
             {
-                Authority = "https://localhost:44319/identity",
+                Authority = ConfigSSL.IdentityServerIdentityIP,
                 ClientId = "mvc_app",
                 Scope = "openid profile roles",
                 RedirectUri = ConfigSSL.MvcAppBaseIP,
