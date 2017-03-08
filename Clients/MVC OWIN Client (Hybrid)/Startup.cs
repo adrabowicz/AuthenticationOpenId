@@ -10,6 +10,7 @@ using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OpenIdConnect;
 using IdentityModel.Client;
+using Configuration;
 
 [assembly: OwinStartup(typeof(MVC_OWIN_Client.Startup))]
 
@@ -29,7 +30,7 @@ namespace MVC_OWIN_Client
             app.UseOpenIdConnectAuthentication(new OpenIdConnectAuthenticationOptions
             {
                 ClientId = "mvc.owin.hybrid",
-                Authority = Constants.BaseAddress,
+                Authority = ConfigSSL.IdentityServerIdentityIP,
                 RedirectUri = "https://localhost:44300/",
                 PostLogoutRedirectUri = "https://localhost:44300/",
                 ResponseType = "code id_token",
