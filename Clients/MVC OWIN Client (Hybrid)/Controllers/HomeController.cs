@@ -1,11 +1,10 @@
-﻿using Newtonsoft.Json.Linq;
-using Sample;
-using System.Linq;
-using System.Net.Http;
+﻿using System.Net.Http;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+
+using Newtonsoft.Json.Linq;
 
 namespace MVC_OWIN_Client.Controllers
 {
