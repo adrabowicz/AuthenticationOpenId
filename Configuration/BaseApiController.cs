@@ -16,7 +16,7 @@ namespace Configuration
         protected string GetUserPermissionsFromCidm(string clientName, string clientSecret, string userId)
         {
             var tokenClient = new TokenClient(
-                Config.IdentityServerConnectTokenIP,
+                Config.IdentityServerConnectTokenIp,
                 clientName,
                 clientSecret);
 
@@ -25,7 +25,7 @@ namespace Configuration
             var client = new HttpClient();
             client.SetBearerToken(response.AccessToken);
 
-            var url = Config.CidmApiBaseIP + "/permissions/" + userId;
+            var url = Config.CidmApiBaseIp + "/permissions/" + userId;
             var aegisPermissions = client.GetStringAsync(url).Result;
             return aegisPermissions;
         }

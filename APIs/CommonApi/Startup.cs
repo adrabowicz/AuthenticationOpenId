@@ -12,7 +12,7 @@ namespace CommonApi
             // accept access tokens from identityserver and require a scope of 'MKP'
             var tokenAuthenticationOptions = new IdentityServerBearerTokenAuthenticationOptions
             {
-                Authority = Config.IdentityServerBaseIP,
+                Authority = Config.IdentityServerBaseIp,
                 ValidationMode = ValidationMode.ValidationEndpoint,
 
                 RequiredScopes = new[] { "common_menu.read" }

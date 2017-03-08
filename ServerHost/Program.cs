@@ -16,7 +16,7 @@ namespace ServerHost
                 .CreateLogger();
 
             // hosting identityserver
-            using (WebApp.Start<Startup>(Config.IdentityServerBaseIP))
+            using (WebApp.Start<Startup>(Config.IdentityServerBaseIp))
             {
                 Console.WriteLine("server running...");
                 Console.ReadLine();
