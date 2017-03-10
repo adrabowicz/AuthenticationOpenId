@@ -34,7 +34,7 @@ namespace MVC_OWIN_Client.Controllers
             var client = new HttpClient();
             client.SetBearerToken(token);
 
-            var result = await client.GetStringAsync(Constants.AspNetWebApiSampleApi + "identity");
+            var result = await client.GetStringAsync("Constants.AspNetWebApiSampleApi" + "identity");
             ViewBag.Json = JArray.Parse(result.ToString());
 
             return View();
