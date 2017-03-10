@@ -5,7 +5,7 @@ namespace Configuration
     {
         public static string IdentityServerBaseIP = "https://localhost:44319/";
         public static string IdentityServerIdentityIP = IdentityServerBaseIP + "identity/";
-        public static string IdentityServerConnectTokenIP = IdentityServerIdentityIP + "connect/token";
+        public static string IdentityServerTokenIP = IdentityServerIdentityIP + "connect/token";
         public static string IdentityServerUserInfoIP = IdentityServerIdentityIP + "connect/userinfo";
 
         public static string MvcAppBaseIP = "https://localhost:44320/";

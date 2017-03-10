@@ -51,7 +51,7 @@ namespace MVC_OWIN_Client
                         {
                             // use the code to get the access and refresh token
                             var tokenClient = new TokenClient(
-                                ConfigSSL.IdentityServerConnectTokenIP,
+                                ConfigSSL.IdentityServerTokenIP,
                                 "mvc.owin.hybrid",
                                 "secret");
 
