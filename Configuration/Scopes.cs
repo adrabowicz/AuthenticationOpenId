@@ -9,6 +9,10 @@ namespace Configuration
         {
             var scopes = new List<Scope>
             {
+                StandardScopes.OpenId,
+                StandardScopes.Profile,
+                StandardScopes.OfflineAccess,
+
                 new Scope
                 {
                     Name = "write",

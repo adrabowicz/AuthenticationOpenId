@@ -13,7 +13,7 @@ namespace Configuration
                  new Client
                 {
                     Flow = Flows.Hybrid,
-                    ClientId = "MVCHybrid-MVD",
+                    ClientId = "mvc.owin.hybrid",
                     ClientSecrets = new List<Secret>
                     {
                         new Secret("secret".Sha256())
