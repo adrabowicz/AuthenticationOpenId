@@ -35,7 +35,7 @@ namespace MVC_OWIN_Client
                 RedirectUri = ConfigSSL.MvcHybridAppBaseIP,
                 PostLogoutRedirectUri = ConfigSSL.MvcHybridAppBaseIP,
                 ResponseType = "code id_token",
-                Scope = "openid profile read write offline_access",
+                Scope = "openid profile common_menu med_data offline_access",
 
                 TokenValidationParameters = new TokenValidationParameters
                 {

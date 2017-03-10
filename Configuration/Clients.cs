@@ -24,8 +24,8 @@ namespace Configuration
                         Constants.StandardScopes.OpenId,
                         Constants.StandardScopes.Profile,
                         Constants.StandardScopes.OfflineAccess,
-                        "read",
-                        "write"
+                        "common_menu",
+                        "med_data"
                     },
                     RedirectUris = new List<string>
                     {
