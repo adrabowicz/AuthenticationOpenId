@@ -25,27 +25,19 @@ namespace Configuration
                 },
                 new Scope
                 {
-                    Name = "cidm_identity.read"
+                    Name = "cidm_identity"
                 },
                 new Scope
                 {
-                    Name = "cidm_permissions.read"
+                    Name = "cidm_permissions"
                 },
                 new Scope
                 {
-                    Name = "common_menu.read"
+                    Name = "common_menu"
                 },
                 new Scope
                 {
-                    Name = "med_data.read"
-                },
-                new Scope
-                {
-                    Name = "med_data.write"
-                },
-                new Scope
-                {
-                    Name = "infusion.read"
+                    Name = "med_data"
                 },
                 new Scope
                 {

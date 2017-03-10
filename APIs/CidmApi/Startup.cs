@@ -15,7 +15,7 @@ namespace CidmApi
                 Authority = Config.IdentityServerBaseIp,
                 ValidationMode = ValidationMode.ValidationEndpoint,
 
-                RequiredScopes = new[] { "cidm_permissions.read", "cidm_identity.read" }
+                RequiredScopes = new[] { "cidm_permissions", "cidm_identity" }
             };
 
             // plug OWIN middleware component for token authentication into the pipeline

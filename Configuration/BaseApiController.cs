@@ -20,7 +20,7 @@ namespace Configuration
                 clientName,
                 clientSecret);
 
-            var response = tokenClient.RequestClientCredentialsAsync("cidm_permissions.read").Result;
+            var response = tokenClient.RequestClientCredentialsAsync("cidm_permissions").Result;
 
             var client = new HttpClient();
             client.SetBearerToken(response.AccessToken);

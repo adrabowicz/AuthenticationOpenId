@@ -85,7 +85,7 @@ namespace Configuration
 
                     AllowedScopes = new List<string>
                     {
-                        "cidm_identity.read"
+                        "cidm_identity"
                     }
                 },
                 new Client
@@ -104,7 +104,7 @@ namespace Configuration
 
                     AllowedScopes = new List<string>
                     {
-                        "cidm_permissions.read"
+                        "cidm_permissions"
                     }
                 },
                 new Client
@@ -123,7 +123,7 @@ namespace Configuration
 
                     AllowedScopes = new List<string>
                     {
-                        "cidm_permissions.read"
+                        "cidm_permissions"
                     }
                 },
                 new Client
@@ -142,26 +142,7 @@ namespace Configuration
 
                     AllowedScopes = new List<string>
                     {
-                        "common_menu.read", "med_data.read"
-                    }
-                },
-                new Client
-                {
-                    ClientName = "Benchmarking App",
-                    ClientId = "benchmarking_app",
-                    Enabled = true,
-                    AccessTokenType = AccessTokenType.Reference,
-
-                    Flow = Flows.ResourceOwner,
-
-                    ClientSecrets = new List<Secret>
-                    {
-                        new Secret("C9195B0E-E5B1-4ADE-A650-DB86322BB7A2".Sha256())
-                    },
-
-                    AllowedScopes = new List<string>
-                    {
-                        "common_menu.read", "med_data.read", "infusion_data.read"
+                        "common_menu", "med_data"
                     }
                 }
             };
