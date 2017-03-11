@@ -9,7 +9,7 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            // get med data
+            // get menu data
             var accessToken = GetAccessToken(clientId: "ma_app", clientSecret: "21B5F798-BE55-42BC-8AA8-0025B903DC3B", scope: "common_menu");
             var url = Config.CommonApiBaseIp + "/menu/ma_app";
             var result = MakeApiCallToGetData(accessToken, url);

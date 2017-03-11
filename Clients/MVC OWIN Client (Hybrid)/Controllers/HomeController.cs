@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 
 using Newtonsoft.Json.Linq;
+using Configuration;
 
 namespace MVC_OWIN_Client.Controllers
 {
@@ -20,10 +21,20 @@ namespace MVC_OWIN_Client.Controllers
         {
             ViewBag.Message = "Claims";
 
-            //var cp = (ClaimsPrincipal)User;
-            //ViewData["access_token"] = cp.FindFirst("access_token").Value;
+            var cp = (ClaimsPrincipal)User;
+            var accessToken = cp.FindFirst("access_token").Value;
+
+            var url = Config.CommonApiBaseIp + "/menu/ma_app";
+            var result = MakeApiCallToGetData(accessToken, url);
 
             return View();
+        }
+
+        private static string MakeApiCallToGetData(string accessToken, string url)
+        {
+            var client = new HttpClient();
+            client.SetBearerToken(accessToken);
+            return client.GetStringAsync(url).Result;
         }
 
         [Authorize]
