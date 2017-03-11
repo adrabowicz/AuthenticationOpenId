@@ -28,7 +28,13 @@ namespace MVC_OWIN_Client
                 AuthenticationType = "Cookies"
             });
 
-            app.UseOpenIdConnectAuthentication(new OpenIdConnectAuthenticationOptions
+            var openIdConnectOptions = GetOpenIdConnectAuthenticationOptions();
+
+            app.UseOpenIdConnectAuthentication(openIdConnectOptions);
+        }
+
+        private static OpenIdConnectAuthenticationOptions GetOpenIdConnectAuthenticationOptions() {
+            var openIdConnectOptions = new OpenIdConnectAuthenticationOptions
             {
                 ClientId = "mvc.owin.hybrid",
                 Authority = ConfigSSL.IdentityServerIdentityIP,
@@ -49,56 +55,57 @@ namespace MVC_OWIN_Client
                 {
                     AuthorizationCodeReceived = async n =>
                     {
-                            // use the code to get the access and refresh token
-                            var tokenClient = new TokenClient(
-                            ConfigSSL.IdentityServerTokenIP,
-                            "mvc.owin.hybrid",
-                            "secret");
+                        // use the code to get the access and refresh token
+                        var tokenClient = new TokenClient(
+                        ConfigSSL.IdentityServerTokenIP,
+                        "mvc.owin.hybrid",
+                        "secret");
 
-                            var tokenResponse = await tokenClient.RequestAuthorizationCodeAsync(n.Code, n.RedirectUri);
+                        var tokenResponse = await tokenClient.RequestAuthorizationCodeAsync(n.Code, n.RedirectUri);
 
-                            if (tokenResponse.IsError)
-                            {
-                                throw new Exception(tokenResponse.Error);
-                            }
+                        if (tokenResponse.IsError)
+                        {
+                            throw new Exception(tokenResponse.Error);
+                        }
 
-                                // use the access token to retrieve claims from userinfo
-                                //var userInfoClient = new UserInfoClient(new Uri(ConfigSSL.IdentityServerUserInfoIP), tokenResponse.AccessToken);
+                        // use the access token to retrieve claims from userinfo
+                        //var userInfoClient = new UserInfoClient(new Uri(ConfigSSL.IdentityServerUserInfoIP), tokenResponse.AccessToken);
 
-                            //var userInfoResponse = await userInfoClient.GetAsync();
+                        //var userInfoResponse = await userInfoClient.GetAsync();
 
-                            // create new identity
-                            var id = new ClaimsIdentity(n.AuthenticationTicket.Identity.AuthenticationType);
-                            //id.AddClaims(userInfoResponse.GetClaimsIdentity().Claims);
+                        // create new identity
+                        var id = new ClaimsIdentity(n.AuthenticationTicket.Identity.AuthenticationType);
+                        //id.AddClaims(userInfoResponse.GetClaimsIdentity().Claims);
 
-                            id.AddClaim(new Claim("access_token", tokenResponse.AccessToken));
-                            //id.AddClaim(new Claim("expires_at", DateTime.Now.AddSeconds(tokenResponse.ExpiresIn).ToLocalTime().ToString(CultureInfo.InvariantCulture)));
-                            //id.AddClaim(new Claim("refresh_token", tokenResponse.RefreshToken));
-                            //id.AddClaim(new Claim("id_token", n.ProtocolMessage.IdToken));
-                            //id.AddClaim(new Claim("sid", n.AuthenticationTicket.Identity.FindFirst("sid").Value));
+                        id.AddClaim(new Claim("access_token", tokenResponse.AccessToken));
+                        //id.AddClaim(new Claim("expires_at", DateTime.Now.AddSeconds(tokenResponse.ExpiresIn).ToLocalTime().ToString(CultureInfo.InvariantCulture)));
+                        //id.AddClaim(new Claim("refresh_token", tokenResponse.RefreshToken));
+                        //id.AddClaim(new Claim("id_token", n.ProtocolMessage.IdToken));
+                        //id.AddClaim(new Claim("sid", n.AuthenticationTicket.Identity.FindFirst("sid").Value));
 
-                            n.AuthenticationTicket = new AuthenticationTicket(
-                                new ClaimsIdentity(id.Claims, n.AuthenticationTicket.Identity.AuthenticationType, "name", "role"),
-                                n.AuthenticationTicket.Properties);
-                        },
+                        n.AuthenticationTicket = new AuthenticationTicket(
+                            new ClaimsIdentity(id.Claims, n.AuthenticationTicket.Identity.AuthenticationType, "name", "role"),
+                            n.AuthenticationTicket.Properties);
+                    },
 
                     RedirectToIdentityProvider = n =>
+                    {
+                        // if signing out, add the id_token_hint
+                        if (n.ProtocolMessage.RequestType == OpenIdConnectRequestType.LogoutRequest)
                         {
-                            // if signing out, add the id_token_hint
-                            if (n.ProtocolMessage.RequestType == OpenIdConnectRequestType.LogoutRequest)
+                            var idTokenHint = n.OwinContext.Authentication.User.FindFirst("id_token");
+
+                            if (idTokenHint != null)
                             {
-                                var idTokenHint = n.OwinContext.Authentication.User.FindFirst("id_token");
-
-                                if (idTokenHint != null)
-                                {
-                                    n.ProtocolMessage.IdTokenHint = idTokenHint.Value;
-                                }
+                                n.ProtocolMessage.IdTokenHint = idTokenHint.Value;
                             }
-
-                            return Task.FromResult(0);
                         }
+
+                        return Task.FromResult(0);
+                    }
                 }
-            });
+            };
+            return openIdConnectOptions;
         }
     }
 }
