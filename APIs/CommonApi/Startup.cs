@@ -9,24 +9,24 @@ namespace CommonApi
     {
         public void Configuration(IAppBuilder app)
         {
-            // accept access tokens from identityserver and require a scope of 'MKP'
-            var tokenAuthenticationOptions = new IdentityServerBearerTokenAuthenticationOptions
-            {
-                Authority = Config.IdentityServerBaseIp,
-                ValidationMode = ValidationMode.ValidationEndpoint,
+            //// accept access tokens from identityserver and require a scope of 'MKP'
+            //var tokenAuthenticationOptions = new IdentityServerBearerTokenAuthenticationOptions
+            //{
+            //    Authority = Config.IdentityServerBaseIp,
+            //    ValidationMode = ValidationMode.ValidationEndpoint,
 
-                RequiredScopes = new[] { "common_menu" }
-            };
+            //    RequiredScopes = new[] { "common_menu" }
+            //};
 
-            // plug OWIN middleware component for token authentication into the pipeline
-            app.UseIdentityServerBearerTokenAuthentication(tokenAuthenticationOptions);
+            //// plug OWIN middleware component for token authentication into the pipeline
+            //app.UseIdentityServerBearerTokenAuthentication(tokenAuthenticationOptions);
 
             // configuration of HttpServer instance
             var config = new HttpConfiguration();
             // map the attribute-defined routes for the application
             config.MapHttpAttributeRoutes();
             // require authentication for all controllers
-            config.Filters.Add(new AuthorizeAttribute());
+       //     config.Filters.Add(new AuthorizeAttribute());
 
             // plug OWIN middleware component for WebApi into the pipeline
             app.UseWebApi(config);

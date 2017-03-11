@@ -33,7 +33,7 @@ namespace MVC_OWIN_Client.Controllers
         private static string MakeApiCallToGetData(string accessToken, string url)
         {
             var client = new HttpClient();
-            client.SetBearerToken(accessToken);
+            //client.SetBearerToken(accessToken);
             return client.GetStringAsync(url).Result;
         }
 
