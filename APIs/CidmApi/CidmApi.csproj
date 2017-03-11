@@ -157,8 +157,8 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\IdentityReadController.cs" />
-    <Compile Include="Controllers\PermissionsReadController.cs" />
+    <Compile Include="Controllers\IdentityController.cs" />
+    <Compile Include="Controllers\PermissionsController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />

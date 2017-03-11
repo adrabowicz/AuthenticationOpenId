@@ -4,7 +4,7 @@ using Thinktecture.IdentityModel.WebApi;
 namespace CidmApi.Controllers
 {
     [ScopeAuthorize("cidm_permissions")]
-    public class PermissionsReadController : ApiController
+    public class PermissionsController : ApiController
     {
         [Route("permissions/{userId}")]
         public IHttpActionResult GetPermissions(string userId)
