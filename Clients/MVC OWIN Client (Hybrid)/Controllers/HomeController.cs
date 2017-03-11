@@ -24,17 +24,13 @@ namespace MVC_OWIN_Client.Controllers
             var cp = (ClaimsPrincipal)User;
             var accessToken = cp.FindFirst("access_token").Value;
 
-            var url = Config.CommonApiBaseIp + "/menu/ma_app";
-            var result = MakeApiCallToGetData(accessToken, url);
-
-            return View();
-        }
-
-        private static string MakeApiCallToGetData(string accessToken, string url)
-        {
             var client = new HttpClient();
             //client.SetBearerToken(accessToken);
-            return client.GetStringAsync(url).Result;
+
+            var url = Config.CommonApiBaseIp + "/menu/ma_app";
+            var result = client.GetStringAsync(url).Result;
+
+            return View();
         }
 
         [Authorize]
