@@ -16,7 +16,7 @@ namespace Configuration
         protected string GetUserPermissionsFromCidm(string clientName, string clientSecret, string userId)
         {
             var tokenClient = new TokenClient(
-                Config.IdentityServerConnectTokenIp,
+                Config.IdentityServerTokenIp,
                 clientName,
                 clientSecret);
 

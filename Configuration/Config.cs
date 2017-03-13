@@ -5,7 +5,7 @@ namespace Configuration
     {
         public static string IdentityServerBaseIp = "http://localhost:5000";
         public static string IdentityServerIdentityIp = IdentityServerBaseIp + "/identity";
-        public static string IdentityServerConnectTokenIp = IdentityServerBaseIp + "/connect/token";
+        public static string IdentityServerTokenIp = IdentityServerBaseIp + "/connect/token";
 
         public static string CidmApiBaseIp = "http://localhost:42001";
         public static string CidmApiTestIp = CidmApiBaseIp + "/test";
@@ -16,6 +16,6 @@ namespace Configuration
         public static string KpApiBaseIp = "http://localhost:42003";
         public static string KpApiTestIp = KpApiBaseIp + "/test";
 
-        public static string MvcAppBaseIp = "http://localhost:42020/";
+        public static string MvcHybridAppBaseIp = "http://localhost:42020/";
     }
 }
