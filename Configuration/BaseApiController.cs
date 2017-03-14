@@ -25,7 +25,7 @@ namespace Configuration
             var client = new HttpClient();
             client.SetBearerToken(response.AccessToken);
 
-            var url = Config.CidmApiBaseIp + "/permissions/" + userId;
+            var url = Config.CidmApiBaseIP + "/permissions/" + userId;
             var aegisPermissions = client.GetStringAsync(url).Result;
             return aegisPermissions;
         }

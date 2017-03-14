@@ -3,19 +3,21 @@ namespace Configuration
 {
     public static class Config
     {
-        public static string IdentityServerBaseIp = "http://localhost:5000";
-        public static string IdentityServerIdentityIp = IdentityServerBaseIp + "/identity";
-        public static string IdentityServerTokenIp = IdentityServerBaseIp + "/connect/token";
+        public static string IdentityServerBaseIP = "http://localhost:5000";
+        public static string IdentityServerIdentityIP = "http://localhost:5000/identity";
+        public static string IdentityServerTokenIp = "http://localhost:5000/connect/token";
+        public static string IdentityServerUserInfoIP = "http://localhost:5000/connect/userinfo";
+        public static string IdentityServerWellKnownIP = "http://localhost:5000/Identity/.well-known/openid-configuration";
 
-        public static string CidmApiBaseIp = "http://localhost:42001";
-        public static string CidmApiTestIp = CidmApiBaseIp + "/test";
+        public static string CidmApiBaseIP = "http://localhost:42001";
+        public static string CidmApiTestIP = CidmApiBaseIP + "/test";
 
-        public static string CommonApiBaseIp = "http://localhost:42002";
-        public static string CommonApiTestIp = CommonApiBaseIp + "/test";
+        public static string CommonApiBaseIP = "http://localhost:42002";
+        public static string CommonApiTestIP = "http://localhost:42002/test";
 
-        public static string KpApiBaseIp = "http://localhost:42003";
-        public static string KpApiTestIp = KpApiBaseIp + "/test";
+        public static string KpApiBaseIP = "http://localhost:42003";
+        public static string KpApiTestIP = "http://localhost:42003/test";
 
-        public static string MvcHybridAppBaseIp = "http://localhost:42020/";
+        public static string MvcHybridAppBaseIP = "http://localhost:42020/";
     }
 }

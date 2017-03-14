@@ -27,7 +27,7 @@ namespace MVC_OWIN_Client.Controllers
             var client = new HttpClient();
             //client.SetBearerToken(accessToken);
 
-            var url = Config.CommonApiBaseIp + "/menu/ma_app";
+            var url = Config.CommonApiBaseIP + "/menu/ma_app";
             var result = client.GetStringAsync(url).Result;
 
             return View();
