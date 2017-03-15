@@ -12,7 +12,7 @@ namespace CidmApi
             // accept access tokens from identityserver and require a scope of 'MKP'
             var tokenAuthenticationOptions = new IdentityServerBearerTokenAuthenticationOptions
             {
-                Authority = Config.IdentityServerBaseIP,
+                Authority = Config.IdentityServerIdentityIP,
                 ValidationMode = ValidationMode.ValidationEndpoint,
 
                 RequiredScopes = new[] { "cidm_permissions", "cidm_identity" }

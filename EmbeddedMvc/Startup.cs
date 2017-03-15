@@ -32,7 +32,7 @@ namespace EmbeddedMvc
                 var identityServerOptions = new IdentityServerOptions
                 {
                     SiteName = "Embedded IdentityServer",
-                    SigningCertificate = LoadCertificate(),
+                    SigningCertificate = CertHelper.LoadCertificate(),
 
                     Factory = new IdentityServerServiceFactory()
                                 .UseInMemoryUsers(Users.Get())
@@ -100,12 +100,6 @@ namespace EmbeddedMvc
                 Notifications = notifications
             };
             app.UseOpenIdConnectAuthentication(openIdConnectOptions);
-        }
-
-        X509Certificate2 LoadCertificate()
-        {
-            return new X509Certificate2(
-                string.Format(@"{0}\bin\idsrv3test.pfx", AppDomain.CurrentDomain.BaseDirectory), "idsrv3test");
         }
     }
 }

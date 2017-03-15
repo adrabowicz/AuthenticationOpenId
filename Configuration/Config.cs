@@ -5,9 +5,9 @@ namespace Configuration
     {
         public static string IdentityServerBaseIP = "http://localhost:5000";
         public static string IdentityServerIdentityIP = "http://localhost:5000/identity";
-        public static string IdentityServerTokenIp = "http://localhost:5000/connect/token";
-        public static string IdentityServerUserInfoIP = "http://localhost:5000/connect/userinfo";
-        public static string IdentityServerWellKnownIP = "http://localhost:5000/Identity/.well-known/openid-configuration";
+        public static string IdentityServerTokenIp = "http://localhost:5000/identity/connect/token";
+        public static string IdentityServerUserInfoIP = "http://localhost:5000/identity/connect/userinfo";
+        public static string IdentityServerWellKnownIP = "http://localhost:5000/identity/.well-known/openid-configuration";
 
         public static string CidmApiBaseIP = "http://localhost:42001";
         public static string CidmApiTestIP = CidmApiBaseIP + "/test";

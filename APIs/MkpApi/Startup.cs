@@ -12,7 +12,7 @@ namespace MkpApi
             // accept access tokens from identityserver and require a scope 
             var tokenAuthenticationOptions = new IdentityServerBearerTokenAuthenticationOptions
             {
-                Authority = Config.IdentityServerBaseIP,
+                Authority = Config.IdentityServerIdentityIP,
                 ValidationMode = ValidationMode.ValidationEndpoint,
 
                 RequiredScopes = new[] { "med_data" }
