@@ -1,4 +1,5 @@
-﻿using Owin;
+﻿using System;
+using Owin;
 using IdentityServer3.Core.Configuration;
 using Configuration;
 
@@ -16,7 +17,7 @@ namespace ServerHost
                 var identityServerOptions = new IdentityServerOptions
                 {
                     SiteName = "Console IdentityServer",
-     //               SigningCertificate = CertHelper.LoadCertificate(),
+                    SigningCertificate = CertHelper.LoadCertificate($@"{AppDomain.CurrentDomain.BaseDirectory}"),
 
                     Factory = new IdentityServerServiceFactory()
                                 .UseInMemoryUsers(Users.Get())

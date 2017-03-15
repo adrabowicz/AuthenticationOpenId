@@ -32,7 +32,7 @@ namespace EmbeddedMvc
                 var identityServerOptions = new IdentityServerOptions
                 {
                     SiteName = "Embedded IdentityServer",
-                    SigningCertificate = CertHelper.LoadCertificate(),
+                    SigningCertificate = CertHelper.LoadCertificate($@"{AppDomain.CurrentDomain.BaseDirectory}bin\"),
 
                     Factory = new IdentityServerServiceFactory()
                                 .UseInMemoryUsers(Users.Get())
