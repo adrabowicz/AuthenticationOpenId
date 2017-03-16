@@ -26,7 +26,7 @@ namespace ConsoleApp
 
         private static string GetAccessToken(string clientId, string clientSecret, string scope)
         {
-            var client = new TokenClient(Config.IdentityServerTokenIp, clientId, clientSecret);
+            var client = new TokenClient(Config.IdentityServerTokenIP, clientId, clientSecret);
             var response = client.RequestResourceOwnerPasswordAsync("bob_med_reader", "secret", scope).Result;
             return response.AccessToken;
         }

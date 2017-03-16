@@ -5,7 +5,7 @@ namespace Configuration
     {
         public static string IdentityServerBaseIP = "http://localhost:5000";
         public static string IdentityServerIdentityIP = "http://localhost:5000/identity";
-        public static string IdentityServerTokenIp = "http://localhost:5000/identity/connect/token";
+        public static string IdentityServerTokenIP = "http://localhost:5000/identity/connect/token";
         public static string IdentityServerUserInfoIP = "http://localhost:5000/identity/connect/userinfo";
         public static string IdentityServerWellKnownIP = "http://localhost:5000/identity/.well-known/openid-configuration";
 
