@@ -29,11 +29,11 @@ namespace Configuration
                     },
                     RedirectUris = new List<string>
                     {
-                        ConfigSSL.MvcHybridAppBaseIP
+                        Config.MvcHybridAppBaseIP
                     },
                     PostLogoutRedirectUris = new List<string>
                     {
-                       ConfigSSL.MvcHybridAppBaseIP
+                       Config.MvcHybridAppBaseIP
                     },
                     AccessTokenLifetime = 3600, // default 3600 seconds
                     RequireConsent = false,

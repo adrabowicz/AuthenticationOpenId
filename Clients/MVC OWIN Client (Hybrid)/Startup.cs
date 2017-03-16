@@ -37,9 +37,9 @@ namespace MVC_OWIN_Client
             var openIdConnectOptions = new OpenIdConnectAuthenticationOptions
             {
                 ClientId = "mvc.owin.hybrid",
-                Authority = ConfigSSL.IdentityServerIdentityIP,
-                RedirectUri = ConfigSSL.MvcHybridAppBaseIP,
-                PostLogoutRedirectUri = ConfigSSL.MvcHybridAppBaseIP,
+                Authority = Config.IdentityServerIdentityIP,
+                RedirectUri = Config.MvcHybridAppBaseIP,
+                PostLogoutRedirectUri = Config.MvcHybridAppBaseIP,
                 ResponseType = "code id_token",
                 Scope = "openid profile common_menu med_data offline_access",
 
@@ -57,7 +57,7 @@ namespace MVC_OWIN_Client
                     {
                         // use the code to get the access and refresh token
                         var tokenClient = new TokenClient(
-                        ConfigSSL.IdentityServerTokenIP,
+                        Config.IdentityServerTokenIP,
                         "mvc.owin.hybrid",
                         "secret");
 
