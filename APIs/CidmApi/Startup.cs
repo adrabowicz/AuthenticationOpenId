@@ -9,7 +9,7 @@ namespace CidmApi
     {
         public void Configuration(IAppBuilder app)
         {
-            // accept access tokens from identityserver and require a scope of 'MKP'
+            // accept access tokens from identityserver and require a scopes
             var tokenAuthenticationOptions = new IdentityServerBearerTokenAuthenticationOptions
             {
                 Authority = Config.IdentityServerIdentityIP,

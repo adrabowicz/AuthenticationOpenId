@@ -25,6 +25,7 @@ namespace Configuration
                         Constants.StandardScopes.Profile,
                         Constants.StandardScopes.OfflineAccess,
                         "common_menu",
+                        "user_info",
                         "med_data"
                     },
                     RedirectUris = new List<string>
@@ -142,7 +143,9 @@ namespace Configuration
 
                     AllowedScopes = new List<string>
                     {
-                        "common_menu", "med_data"
+                        "common_menu",
+                        "user_info",
+                        "med_data"
                     }
                 }
             };

@@ -37,6 +37,10 @@ namespace Configuration
                 },
                 new Scope
                 {
+                    Name = "user_info"
+                },
+                new Scope
+                {
                     Name = "med_data"
                 },
                 new Scope

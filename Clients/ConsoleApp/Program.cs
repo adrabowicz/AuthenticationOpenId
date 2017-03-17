@@ -13,7 +13,13 @@ namespace ConsoleApp
             var accessToken = GetAccessToken(clientId: "ma_app", clientSecret: "21B5F798-BE55-42BC-8AA8-0025B903DC3B", scope: "common_menu");
             var url = Config.CommonApiBaseIP + "/menu/ma_app";
             var result = MakeApiCallToGetData(accessToken, url);
-            Console.WriteLine("Data received from Common Menu Service: " + result);
+            Console.WriteLine("Data received from Menu Service: " + result);
+
+            // get user data
+            accessToken = GetAccessToken(clientId: "ma_app", clientSecret: "21B5F798-BE55-42BC-8AA8-0025B903DC3B", scope: "user_info");
+            url = Config.CommonApiBaseIP + "/user-info";
+            result = MakeApiCallToGetData(accessToken, url);
+            Console.WriteLine("Data received from User Info Service: " + result);
 
             // get med data
             accessToken = GetAccessToken(clientId: "ma_app", clientSecret: "21B5F798-BE55-42BC-8AA8-0025B903DC3B", scope: "med_data");

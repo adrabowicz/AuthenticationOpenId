@@ -9,13 +9,13 @@ namespace CommonApi
     {
         public void Configuration(IAppBuilder app)
         {
-            // accept access tokens from identityserver and require a scope of 'MKP'
+            // accept access tokens from identityserver and require scopes
             var tokenAuthenticationOptions = new IdentityServerBearerTokenAuthenticationOptions
             {
                 Authority = Config.IdentityServerIdentityIP,
                 ValidationMode = ValidationMode.ValidationEndpoint,
 
-                RequiredScopes = new[] { "common_menu" }
+                RequiredScopes = new[] { "common_menu", "user_info" }
             };
 
             // plug OWIN middleware component for token authentication into the pipeline
