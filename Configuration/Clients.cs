@@ -143,6 +143,7 @@ namespace Configuration
 
                     AllowedScopes = new List<string>
                     {
+                        Constants.StandardScopes.OpenId,
                         "common_menu",
                         "user_info",
                         "med_data"

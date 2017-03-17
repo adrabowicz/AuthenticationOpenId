@@ -16,7 +16,7 @@ namespace ConsoleApp
             Console.WriteLine("Data received from Menu Service: " + result);
 
             // get user data
-            accessToken = GetAccessToken(clientId: "ma_app", clientSecret: "21B5F798-BE55-42BC-8AA8-0025B903DC3B", scope: "user_info");
+            accessToken = GetAccessToken(clientId: "ma_app", clientSecret: "21B5F798-BE55-42BC-8AA8-0025B903DC3B", scope: "user_info openid");
             url = Config.CommonApiBaseIP + "/user-info";
             result = MakeApiCallToGetData(accessToken, url);
             Console.WriteLine("Data received from User Info Service: " + result);

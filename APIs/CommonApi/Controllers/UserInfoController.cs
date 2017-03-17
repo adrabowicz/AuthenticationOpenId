@@ -1,11 +1,7 @@
-﻿using Configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Net.Http;
 using System.Web.Http;
 using Thinktecture.IdentityModel.WebApi;
+using Configuration;
 
 namespace CommonApi.Controllers
 {
@@ -20,6 +16,11 @@ namespace CommonApi.Controllers
             {
                 return Unauthorized();
             }
+
+            // use the access token to retrieve claims from userinfo
+            var client = new HttpClient();
+            client.SetBearerToken(ActionContext.Request.Headers.Authorization.Parameter);
+            var userInfo = client.GetAsync(Config.IdentityServerUserInfoIP).Result;
 
             return Ok("user info");
         }
