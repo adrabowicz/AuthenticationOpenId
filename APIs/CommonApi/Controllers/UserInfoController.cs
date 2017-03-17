@@ -1,7 +1,8 @@
-﻿using System.Net.Http;
+﻿using System;
 using System.Web.Http;
 using Thinktecture.IdentityModel.WebApi;
 using Configuration;
+using IdentityModel.Client;
 
 namespace CommonApi.Controllers
 {
@@ -18,9 +19,10 @@ namespace CommonApi.Controllers
             }
 
             // use the access token to retrieve claims from userinfo
-            var client = new HttpClient();
-            client.SetBearerToken(ActionContext.Request.Headers.Authorization.Parameter);
-            var userInfo = client.GetAsync(Config.IdentityServerUserInfoIP).Result;
+            var accessToken = ActionContext.Request.Headers.Authorization.Parameter;
+            var client = new UserInfoClient(new Uri(Config.IdentityServerUserInfoIP), accessToken);
+            var userInfoResponse = client.GetAsync().Result;
+            var claims = userInfoResponse.GetClaimsIdentity().Claims;
 
             return Ok("user info");
         }
