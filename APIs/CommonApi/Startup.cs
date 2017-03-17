@@ -12,7 +12,7 @@ namespace CommonApi
             // accept access tokens from identityserver and require a scope of 'MKP'
             var tokenAuthenticationOptions = new IdentityServerBearerTokenAuthenticationOptions
             {
-                Authority = Config.IdentityServerBaseIP,
+                Authority = Config.IdentityServerIdentityIP,
                 ValidationMode = ValidationMode.ValidationEndpoint,
 
                 RequiredScopes = new[] { "common_menu" }
@@ -26,7 +26,7 @@ namespace CommonApi
             // map the attribute-defined routes for the application
             config.MapHttpAttributeRoutes();
             // require authentication for all controllers
-       //     config.Filters.Add(new AuthorizeAttribute());
+            config.Filters.Add(new AuthorizeAttribute());
 
             // plug OWIN middleware component for WebApi into the pipeline
             app.UseWebApi(config);
