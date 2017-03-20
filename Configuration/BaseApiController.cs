@@ -13,7 +13,7 @@ namespace Configuration
             return caller?.FindFirst("sub")?.Value;
          }
 
-        protected string GetUserPermissionsFromCidm(string clientName, string clientSecret, string userId)
+        protected string GetUserDataFromCidm(string clientName, string clientSecret, string userId, string api)
         {
             var tokenClient = new TokenClient(
                 Config.IdentityServerTokenIP,
@@ -25,9 +25,9 @@ namespace Configuration
             var client = new HttpClient();
             client.SetBearerToken(response.AccessToken);
 
-            var url = Config.CidmApiBaseIP + "/permissions/" + userId;
-            var aegisPermissions = client.GetStringAsync(url).Result;
-            return aegisPermissions;
+            var url = Config.CidmApiBaseIP + "/" + api + "/" + userId;
+            var aegisData = client.GetStringAsync(url).Result;
+            return aegisData;
         }
     }
 }
