@@ -18,11 +18,9 @@ namespace CommonApi.Controllers
                 return Unauthorized();
             }
 
-            // use the access token to retrieve claims from userinfo
-            var accessToken = ActionContext.Request.Headers.Authorization.Parameter;
-            var client = new UserInfoClient(new Uri(Config.IdentityServerUserInfoIP), accessToken);
-            var userInfoResponse = client.GetAsync().Result;
-            var claims = userInfoResponse.GetClaimsIdentity().Claims;
+            var aegisData = GetUserDataFromCidm(clientName: "med_data_service", clientSecret: "C307B573-1B25-4DF5-8AC7-E7f25A43C229", userId: userId);
+
+            // retrieve user info 
 
             return Ok("user info");
         }

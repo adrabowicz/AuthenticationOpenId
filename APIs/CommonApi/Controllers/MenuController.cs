@@ -16,7 +16,7 @@ namespace CommonApi.Controllers
                 return Unauthorized();
             }
 
-            var userAegisPermissions = GetUserDataFromCidm(clientName: "med_data_service", clientSecret: "C307B573-1B25-4DF5-8AC7-E7f25A43C229", userId: userId, api: "permissions");
+            var aegisPermissions = GetAppDataFromCidm(clientName: "med_data_service", clientSecret: "C307B573-1B25-4DF5-8AC7-E7f25A43C229", userId: userId);
 
             // retrieve menu data for application with id: appId
 

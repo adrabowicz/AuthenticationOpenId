@@ -7,9 +7,11 @@ namespace CidmApi.Controllers
     public class IdentityController : ApiController
     {
         [Route("identity")]
-        public IHttpActionResult GetUserInfo()
+        public IHttpActionResult GetUserData()
         {
-            return Ok();
+            // get user data from AEGIS database
+
+            return Ok("AEGIS user data");
         }
     }
 }
