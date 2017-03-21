@@ -66,25 +66,6 @@ namespace Configuration
                 },
                 new Client
                 {
-                    ClientName = "CIDM Service",
-                    ClientId = "cidm_service",
-                    Enabled = true,
-                    AccessTokenType = AccessTokenType.Reference,
-
-                    Flow = Flows.ClientCredentials,
-
-                    ClientSecrets = new List<Secret>
-                    {
-                        new Secret("F621F470-9731-4A25-80EF-67A6F7C5F4B8".Sha256())
-                    },
-
-                    AllowedScopes = new List<string>
-                    {
-                        "cidm_identity"
-                    }
-                },
-                new Client
-                {
                     ClientName = "Common Service",
                     ClientId = "common_service",
                     Enabled = true,
@@ -99,7 +80,8 @@ namespace Configuration
 
                     AllowedScopes = new List<string>
                     {
-                        "cidm_permissions"
+                        "cidm_permissions",
+                        "cidm_identity"
                     }
                 },
                 new Client

@@ -6,7 +6,7 @@ namespace CidmApi.Controllers
     [ScopeAuthorize("cidm_identity")]
     public class IdentityController : ApiController
     {
-        [Route("identity")]
+        [Route("identity/{userId}")]
         public IHttpActionResult GetUserData()
         {
             // get user data from AEGIS database

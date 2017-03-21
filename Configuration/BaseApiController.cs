@@ -16,12 +16,11 @@ namespace Configuration
         protected string GetAppDataFromCidm(string clientName, string clientSecret, string userId)
         {
             return GetDataFromCidm(clientName, clientSecret, userId, "permissions", "cidm_permissions");
-            //return GetDataFromCidm(clientName, clientSecret, userId, "identity", "cidm_identity");
         }
 
         protected string GetUserDataFromCidm(string clientName, string clientSecret, string userId)
         {
-            return GetDataFromCidm(clientName, clientSecret, userId, "permissions", "cidm_permissions");
+            return GetDataFromCidm(clientName, clientSecret, userId, "identity", "cidm_identity");
         }
 
         private string GetDataFromCidm(string clientName, string clientSecret, string userId, string api, string scope)
