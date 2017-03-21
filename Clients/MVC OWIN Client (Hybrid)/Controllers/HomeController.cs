@@ -1,10 +1,7 @@
 ﻿using System.Net.Http;
 using System.Security.Claims;
-using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
-
-using Newtonsoft.Json.Linq;
 using Configuration;
 
 namespace MVC_OWIN_Client.Controllers
@@ -38,9 +35,11 @@ namespace MVC_OWIN_Client.Controllers
             var url = Config.CommonApiBaseIP + "/menu/ma_app";
             ViewBag.MenuData = client.GetStringAsync(url).Result;
 
+            url = Config.CommonApiBaseIP + "/user-info";
+            ViewBag.UserData = client.GetStringAsync(url).Result;
 
-            ViewBag.UserData = "user data";
-            ViewBag.MedData = "med data";
+            url = Config.CommonApiBaseIP + "/med-data/15";
+            ViewBag.UserData = client.GetStringAsync(url).Result;
 
             return View();
         }
