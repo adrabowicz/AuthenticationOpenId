@@ -22,13 +22,25 @@ namespace MVC_OWIN_Client.Controllers
             ViewBag.Message = "Claims";
 
             var cp = (ClaimsPrincipal)User;
+
+            return View();
+        }
+
+        [Authorize]
+        public ActionResult Authorization() {
+
+            var cp = (ClaimsPrincipal)User;
             var accessToken = cp.FindFirst("access_token").Value;
 
             var client = new HttpClient();
             client.SetBearerToken(accessToken);
 
             var url = Config.CommonApiBaseIP + "/menu/ma_app";
-            var result = client.GetStringAsync(url).Result;
+            ViewBag.MenuData = client.GetStringAsync(url).Result;
+
+
+            ViewBag.UserData = "user data";
+            ViewBag.MedData = "med data";
 
             return View();
         }
