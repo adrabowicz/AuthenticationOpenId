@@ -10,7 +10,29 @@ namespace Configuration
         {
             return new List<Client>
             {
-                 new Client
+                new Client
+                {
+                    ClientName = "Console App",
+                    ClientId = "ma_app",
+                    Enabled = true,
+                    AccessTokenType = AccessTokenType.Reference,
+
+                    Flow = Flows.ResourceOwner,
+
+                    ClientSecrets = new List<Secret>
+                    {
+                        new Secret("21B5F798-BE55-42BC-8AA8-0025B903DC3B".Sha256())
+                    },
+
+                    AllowedScopes = new List<string>
+                    {
+                        Constants.StandardScopes.OpenId,
+                        "common_menu",
+                        "user_info",
+                        "med_data"
+                    }
+                },
+                new Client
                 {
                     Flow = Flows.Hybrid,
                     ClientId = "mvc.owin.hybrid",
@@ -42,38 +64,8 @@ namespace Configuration
                 },
                 new Client
                 {
-                    ClientName = "MVC Client",
-                    ClientId = "mvc",
-                    Enabled = true,
-
-                    Flow = Flows.Implicit,
-
-                    RedirectUris = new List<string>
-                    {
-                        ConfigSSL.IdentityServerBaseIP
-                    },
-
-                    AllowAccessToAllScopes = true
-                },
-                new Client
-                {
-                    ClientName = "MVC App",
-                    ClientId = "mvc_app",
-                    Enabled = true,
-
-                    Flow = Flows.Implicit,
-
-                    RedirectUris = new List<string>
-                    {
-                        ConfigSSL.MvcAppBaseIP
-                    },
-
-                    AllowAccessToAllScopes = true
-                },
-                new Client
-                {
-                    ClientName = "IDM Service",
-                    ClientId = "idm_service",
+                    ClientName = "CIDM Service",
+                    ClientId = "cidm_service",
                     Enabled = true,
                     AccessTokenType = AccessTokenType.Reference,
 
@@ -91,8 +83,8 @@ namespace Configuration
                 },
                 new Client
                 {
-                    ClientName = "Common Menu Service",
-                    ClientId = "common_menu_service",
+                    ClientName = "Common Service",
+                    ClientId = "common_service",
                     Enabled = true,
                     AccessTokenType = AccessTokenType.Reference,
 
@@ -125,28 +117,6 @@ namespace Configuration
                     AllowedScopes = new List<string>
                     {
                         "cidm_permissions"
-                    }
-                },
-                new Client
-                {
-                    ClientName = "MA App",
-                    ClientId = "ma_app",
-                    Enabled = true,
-                    AccessTokenType = AccessTokenType.Reference,
-
-                    Flow = Flows.ResourceOwner,
-                    
-                    ClientSecrets = new List<Secret>
-                    {
-                        new Secret("21B5F798-BE55-42BC-8AA8-0025B903DC3B".Sha256())
-                    },
-
-                    AllowedScopes = new List<string>
-                    {
-                        Constants.StandardScopes.OpenId,
-                        "common_menu",
-                        "user_info",
-                        "med_data"
                     }
                 }
             };
