@@ -41,7 +41,7 @@ namespace MVC_OWIN_Client
                 RedirectUri = Config.MvcHybridAppBaseIP,
                 PostLogoutRedirectUri = Config.MvcHybridAppBaseIP,
                 ResponseType = "code id_token",
-                Scope = "openid profile common_menu med_data offline_access",
+                Scope = "openid common_menu med_data offline_access",
 
                 TokenValidationParameters = new TokenValidationParameters
                 {
@@ -56,10 +56,9 @@ namespace MVC_OWIN_Client
                     AuthorizationCodeReceived = async n =>
                     {
                         // use the code to get the access and refresh token
-                        var tokenClient = new TokenClient(
-                        Config.IdentityServerTokenIP,
-                        "mvc.owin.hybrid",
-                        "secret");
+                        var tokenClient = new TokenClient(Config.IdentityServerTokenIP,
+                                                          "mvc.owin.hybrid",
+                                                          "36fe6589-fa3f-4459-a985-9dac65b4fa9d");
 
                         var tokenResponse = await tokenClient.RequestAuthorizationCodeAsync(n.Code, n.RedirectUri);
 
@@ -68,20 +67,9 @@ namespace MVC_OWIN_Client
                             throw new Exception(tokenResponse.Error);
                         }
 
-                        // use the access token to retrieve claims from userinfo
-                        //var userInfoClient = new UserInfoClient(new Uri(ConfigSSL.IdentityServerUserInfoIP), tokenResponse.AccessToken);
-
-                        //var userInfoResponse = await userInfoClient.GetAsync();
-
-                        // create new identity
                         var id = new ClaimsIdentity(n.AuthenticationTicket.Identity.AuthenticationType);
-                        //id.AddClaims(userInfoResponse.GetClaimsIdentity().Claims);
 
                         id.AddClaim(new Claim("access_token", tokenResponse.AccessToken));
-                        //id.AddClaim(new Claim("expires_at", DateTime.Now.AddSeconds(tokenResponse.ExpiresIn).ToLocalTime().ToString(CultureInfo.InvariantCulture)));
-                        //id.AddClaim(new Claim("refresh_token", tokenResponse.RefreshToken));
-                        //id.AddClaim(new Claim("id_token", n.ProtocolMessage.IdToken));
-                        //id.AddClaim(new Claim("sid", n.AuthenticationTicket.Identity.FindFirst("sid").Value));
 
                         n.AuthenticationTicket = new AuthenticationTicket(
                             new ClaimsIdentity(id.Claims, n.AuthenticationTicket.Identity.AuthenticationType, "name", "role"),

@@ -15,8 +15,9 @@ namespace Configuration
                     ClientName = "Console App",
                     ClientId = "ma_app",
                     Enabled = true,
-                    AccessTokenType = AccessTokenType.Reference,
+                    RequireConsent = false,
 
+                    AccessTokenType = AccessTokenType.Reference,
                     Flow = Flows.ResourceOwner,
 
                     ClientSecrets = new List<Secret>
@@ -34,17 +35,21 @@ namespace Configuration
                 },
                 new Client
                 {
-                    Flow = Flows.Hybrid,
+                    ClientName = "MVC App",
                     ClientId = "mvc.owin.hybrid",
+                    Enabled = true,
+                    RequireConsent = false,
+
+                    Flow = Flows.Hybrid,
+
                     ClientSecrets = new List<Secret>
                     {
-                        new Secret("secret".Sha256())
+                        new Secret("36fe6589-fa3f-4459-a985-9dac65b4fa9d".Sha256())
                     },
-                    ClientName = "MVD",
+
                     AllowedScopes = new List<string>
                     {
                         Constants.StandardScopes.OpenId,
-                        Constants.StandardScopes.Profile,
                         Constants.StandardScopes.OfflineAccess,
                         "common_menu",
                         "user_info",
@@ -57,10 +62,7 @@ namespace Configuration
                     PostLogoutRedirectUris = new List<string>
                     {
                        Config.MvcHybridAppBaseIP
-                    },
-                    AccessTokenLifetime = 3600, // default 3600 seconds
-                    RequireConsent = false,
-                    Enabled = true
+                    }
                 },
                 new Client
                 {
