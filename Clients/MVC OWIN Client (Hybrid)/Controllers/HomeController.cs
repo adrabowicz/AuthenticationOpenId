@@ -38,8 +38,8 @@ namespace MVC_OWIN_Client.Controllers
             url = Config.CommonApiBaseIP + "/user-info";
             ViewBag.UserData = client.GetStringAsync(url).Result;
 
-            url = Config.CommonApiBaseIP + "/med-data/15";
-            ViewBag.UserData = client.GetStringAsync(url).Result;
+            url = Config.KpApiBaseIP + "/med-data/15";
+            ViewBag.MedData = client.GetStringAsync(url).Result;
 
             return View();
         }
