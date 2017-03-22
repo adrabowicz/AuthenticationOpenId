@@ -15,7 +15,7 @@ namespace CommonApi
                 Authority = Config.IdentityServerIdentityIP,
                 ValidationMode = ValidationMode.ValidationEndpoint,
 
-                RequiredScopes = new[] { "common_menu", "user_info" }
+                RequiredScopes = new[] { "common_menu_api", "user_info_api" }
             };
 
             // plug OWIN middleware component for token authentication into the pipeline

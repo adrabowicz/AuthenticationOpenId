@@ -3,7 +3,7 @@ using Thinktecture.IdentityModel.WebApi;
 
 namespace CidmApi.Controllers
 {
-    [ScopeAuthorize("cidm_identity")]
+    [ScopeAuthorize("cidm_identity_api")]
     public class IdentityController : ApiController
     {
         [Route("identity/{userId}")]

@@ -15,7 +15,7 @@ namespace MkpApi
                 Authority = Config.IdentityServerIdentityIP,
                 ValidationMode = ValidationMode.ValidationEndpoint,
 
-                RequiredScopes = new[] { "med_data" }
+                RequiredScopes = new[] { "med_data_api" }
             };
 
             // plug OWIN middleware component for token authentication into the pipeline

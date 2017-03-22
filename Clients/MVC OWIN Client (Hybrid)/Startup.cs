@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.IdentityModel.Tokens;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -41,13 +40,7 @@ namespace MVC_OWIN_Client
                 RedirectUri = Config.MvcHybridAppBaseIP,
                 PostLogoutRedirectUri = Config.MvcHybridAppBaseIP,
                 ResponseType = "code id_token",
-                Scope = "openid common_menu user_info med_data",
-
-                TokenValidationParameters = new TokenValidationParameters
-                {
-                    NameClaimType = "name",
-                    RoleClaimType = "role"
-                },
+                Scope = "openid common_menu_api user_info_api med_data_api",
 
                 SignInAsAuthenticationType = "Cookies",
 
@@ -67,12 +60,12 @@ namespace MVC_OWIN_Client
                             throw new Exception(tokenResponse.Error);
                         }
 
-                        var id = new ClaimsIdentity(n.AuthenticationTicket.Identity.AuthenticationType);
+                        var identity = new ClaimsIdentity(n.AuthenticationTicket.Identity.AuthenticationType);
 
-                        id.AddClaim(new Claim("access_token", tokenResponse.AccessToken));
+                        identity.AddClaim(new Claim("access_token", tokenResponse.AccessToken));
 
                         n.AuthenticationTicket = new AuthenticationTicket(
-                            new ClaimsIdentity(id.Claims, n.AuthenticationTicket.Identity.AuthenticationType, "name", "role"),
+                            new ClaimsIdentity(identity.Claims, n.AuthenticationTicket.Identity.AuthenticationType, "name", "role"),
                             n.AuthenticationTicket.Properties);
                     },
 

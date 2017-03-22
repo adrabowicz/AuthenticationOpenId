@@ -4,7 +4,7 @@ using Configuration;
 
 namespace CommonApi.Controllers
 {
-    [ScopeAuthorize("common_menu")]
+    [ScopeAuthorize("common_menu_api")]
     public class MenuController : BaseApiController
     {
         [Route("menu/{appId}")]

@@ -10,19 +10,19 @@ namespace ConsoleApp
         static void Main(string[] args)
         {
             // get menu data
-            var accessToken = GetAccessToken(clientId: "ma_app", clientSecret: "21B5F798-BE55-42BC-8AA8-0025B903DC3B", scope: "common_menu");
+            var accessToken = GetAccessToken(clientId: "ma_app", clientSecret: "21B5F798-BE55-42BC-8AA8-0025B903DC3B", scope: "common_menu_api");
             var url = Config.CommonApiBaseIP + "/menu/ma_app";
             var result = MakeApiCallToGetData(accessToken, url);
             Console.WriteLine("Data received from Menu Service: " + result);
 
             // get user data
-            accessToken = GetAccessToken(clientId: "ma_app", clientSecret: "21B5F798-BE55-42BC-8AA8-0025B903DC3B", scope: "user_info openid");
+            accessToken = GetAccessToken(clientId: "ma_app", clientSecret: "21B5F798-BE55-42BC-8AA8-0025B903DC3B", scope: "user_info_api openid");
             url = Config.CommonApiBaseIP + "/user-info";
             result = MakeApiCallToGetData(accessToken, url);
             Console.WriteLine("Data received from User Info Service: " + result);
 
             // get med data
-            accessToken = GetAccessToken(clientId: "ma_app", clientSecret: "21B5F798-BE55-42BC-8AA8-0025B903DC3B", scope: "med_data");
+            accessToken = GetAccessToken(clientId: "ma_app", clientSecret: "21B5F798-BE55-42BC-8AA8-0025B903DC3B", scope: "med_data_api");
             url = Config.KpApiBaseIP + "/med-data/15";
             result = MakeApiCallToGetData(accessToken, url);
             Console.WriteLine("Data received from Med Data Service: " + result);

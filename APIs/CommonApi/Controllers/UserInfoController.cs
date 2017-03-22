@@ -6,7 +6,7 @@ using IdentityModel.Client;
 
 namespace CommonApi.Controllers
 {
-    [ScopeAuthorize("user_info")]
+    [ScopeAuthorize("user_info_api")]
     public class UserInfoController : BaseApiController
     {
         [Route("user-info")]

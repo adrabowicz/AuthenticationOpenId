@@ -28,9 +28,9 @@ namespace Configuration
                     AllowedScopes = new List<string>
                     {
                         Constants.StandardScopes.OpenId,
-                        "common_menu",
-                        "user_info",
-                        "med_data"
+                        "common_menu_api",
+                        "user_info_api",
+                        "med_data_api"
                     }
                 },
                 new Client
@@ -51,9 +51,9 @@ namespace Configuration
                     {
                         Constants.StandardScopes.OpenId,
                         Constants.StandardScopes.OfflineAccess,
-                        "common_menu",
-                        "user_info",
-                        "med_data"
+                        "common_menu_api",
+                        "user_info_api",
+                        "med_data_api"
                     },
                     RedirectUris = new List<string>
                     {
@@ -80,8 +80,8 @@ namespace Configuration
 
                     AllowedScopes = new List<string>
                     {
-                        "cidm_permissions",
-                        "cidm_identity"
+                        "cidm_permissions_api",
+                        "cidm_identity_api"
                     }
                 },
                 new Client
@@ -100,7 +100,7 @@ namespace Configuration
 
                     AllowedScopes = new List<string>
                     {
-                        "cidm_permissions"
+                        "cidm_permissions_api"
                     }
                 }
             };

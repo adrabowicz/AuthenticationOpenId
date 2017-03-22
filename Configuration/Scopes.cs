@@ -10,38 +10,27 @@ namespace Configuration
             var scopes = new List<Scope>
             {
                 StandardScopes.OpenId,
-                StandardScopes.Profile,
                 StandardScopes.OfflineAccess,
 
                 new Scope
                 {
-                    Name = "write",
-                    DisplayName = "Write User Data"
+                    Name = "cidm_identity_api"
                 },
                 new Scope
                 {
-                    Name = "read",
-                    DisplayName = "Read User Data"
+                    Name = "cidm_permissions_api"
                 },
                 new Scope
                 {
-                    Name = "cidm_identity"
+                    Name = "common_menu_api"
                 },
                 new Scope
                 {
-                    Name = "cidm_permissions"
+                    Name = "user_info_api"
                 },
                 new Scope
                 {
-                    Name = "common_menu"
-                },
-                new Scope
-                {
-                    Name = "user_info"
-                },
-                new Scope
-                {
-                    Name = "med_data"
+                    Name = "med_data_api"
                 },
                 new Scope
                 {

@@ -4,7 +4,7 @@ using Configuration;
 
 namespace MkpApi.Controllers
 {
-    [ScopeAuthorize("med_data")]
+    [ScopeAuthorize("med_data_api")]
     public class MedDataController : BaseApiController
     {
         [Route("med-data/{hospitalId}")]
