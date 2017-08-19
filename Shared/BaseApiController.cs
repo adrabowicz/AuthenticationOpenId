@@ -26,18 +26,10 @@ namespace Shared
 
         private string GetDataFromCidm(string clientName, string clientSecret, string userId, string api, string scope)
         {
-            var tokenClient = new TokenClient(
-                Config.IdentityServerTokenIP,
-                clientName,
-                clientSecret);
-
-            var response = tokenClient.RequestClientCredentialsAsync(scope).Result;
-
-            var client = new HttpClient();
-            client.SetBearerToken(response.AccessToken);
+            var httpClient = SharedHttpClient.GetHttpClient(clientName, clientSecret, scope);
 
             var url = Config.CidmApiBaseIP + "/" + api + "/" + userId;
-            var aegisData = client.GetStringAsync(url).Result;
+            var aegisData = httpClient.GetStringAsync(url).Result;
             return aegisData;
         }
     }
