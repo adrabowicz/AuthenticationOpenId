@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerHost", "ServerHost\ServerHost.csproj", "{84380C11-ED31-4DFA-AD3D-94C468F96CB2}"
 EndProject
@@ -20,6 +20,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "Clients\ConsoleApp\ConsoleApp.csproj", "{99454126-F540-48D2-ACA2-E0E4CB9A846D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC OWIN Client (Hybrid)", "Clients\MVC OWIN Client (Hybrid)\MVC OWIN Client (Hybrid).csproj", "{3C42437D-1B6C-4037-8FDA-8835D1B7B12C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{3A107F14-DA8C-4A7E-A7C1-B40D69A81CD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +57,10 @@ Global
 		{3C42437D-1B6C-4037-8FDA-8835D1B7B12C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C42437D-1B6C-4037-8FDA-8835D1B7B12C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C42437D-1B6C-4037-8FDA-8835D1B7B12C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A107F14-DA8C-4A7E-A7C1-B40D69A81CD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A107F14-DA8C-4A7E-A7C1-B40D69A81CD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A107F14-DA8C-4A7E-A7C1-B40D69A81CD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A107F14-DA8C-4A7E-A7C1-B40D69A81CD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
