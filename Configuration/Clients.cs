@@ -16,8 +16,8 @@ namespace Configuration
                     ClientId = "ma_app",
                     Enabled = true,
                     RequireConsent = false,
-
                     AccessTokenType = AccessTokenType.Reference,
+
                     Flow = Flows.ResourceOwner,
 
                     ClientSecrets = new List<Secret>
