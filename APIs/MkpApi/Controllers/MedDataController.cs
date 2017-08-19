@@ -1,6 +1,6 @@
 ﻿using System.Web.Http;
 using Thinktecture.IdentityModel.WebApi;
-using Configuration;
+using Shared;
 
 namespace MkpApi.Controllers
 {

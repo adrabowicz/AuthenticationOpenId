@@ -1,8 +1,6 @@
-﻿using System;
-using System.Web.Http;
+﻿using System.Web.Http;
 using Thinktecture.IdentityModel.WebApi;
-using Configuration;
-using IdentityModel.Client;
+using Shared;
 
 namespace CommonApi.Controllers
 {

@@ -1,9 +1,10 @@
 ﻿using System.Security.Claims;
 using System.Web.Http;
-using IdentityModel.Client;
 using System.Net.Http;
+using IdentityModel.Client;
+using Configuration;
 
-namespace Configuration
+namespace Shared
 {
     public class BaseApiController : ApiController
     {

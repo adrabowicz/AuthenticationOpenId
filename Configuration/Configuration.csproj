@@ -110,7 +110,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseApiController.cs" />
     <Compile Include="CertHelper.cs" />
     <Compile Include="Clients.cs" />
     <Compile Include="Config.cs" />

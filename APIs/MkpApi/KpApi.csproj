@@ -165,6 +165,10 @@
       <Project>{9a253f5d-3f7e-4e8a-b465-64d233d7c319}</Project>
       <Name>Configuration</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Shared\Shared.csproj">
+      <Project>{3a107f14-da8c-4a7e-a7c1-b40d69a81cd1}</Project>
+      <Name>Shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
