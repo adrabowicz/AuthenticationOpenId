@@ -13,10 +13,10 @@ namespace Configuration
         public static string CidmApiTestIP = CidmApiBaseIP + "/test";
 
         public static string CommonApiBaseIP = "http://localhost:42002";
-        public static string CommonApiTestIP = "http://localhost:42002/test";
+        public static string CommonApiTestIP = CommonApiBaseIP + "/test";
 
         public static string KpApiBaseIP = "http://localhost:42003";
-        public static string KpApiTestIP = "http://localhost:42003/test";
+        public static string KpApiTestIP = KpApiBaseIP + "/test";
 
         public static string MvcHybridAppBaseIP = "http://localhost:42020/";
 
