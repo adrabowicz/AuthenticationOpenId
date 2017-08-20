@@ -94,6 +94,12 @@
     <Content Include="app\trips\tripIndex.html" />
     <Content Include="app\trips\tripIndexController.js" />
     <Content Include="callback.html" />
+    <Content Include="common\common.services.js" />
+    <Content Include="common\pictureForCreationResource.js" />
+    <Content Include="common\pictureResource.js" />
+    <Content Include="common\tokenContainer.js" />
+    <Content Include="common\tripForCreationResource.js" />
+    <Content Include="common\tripResource.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
