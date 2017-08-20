@@ -19,5 +19,7 @@ namespace Configuration
         public static string KpApiTestIP = "http://localhost:42003/test";
 
         public static string MvcHybridAppBaseIP = "http://localhost:42020/";
+
+        public static string XOneRedirectUri = "http://localhost:xxxx";
     }
 }

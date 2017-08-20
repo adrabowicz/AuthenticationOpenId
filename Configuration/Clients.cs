@@ -12,6 +12,26 @@ namespace Configuration
             {
                 new Client
                 {
+                    ClientName = "AngularJS App",
+                    ClientId = "xone_app",
+                    Enabled = true,
+
+                    Flow = Flows.Implicit,
+
+                    AllowedScopes = new List<string>
+                    {
+                        "common_menu_api",
+                        "user_info_api",
+                        "med_data_api"
+                    },
+
+                    RedirectUris = new List<string>
+                    {
+                        Config.XOneRedirectUri 
+                    }
+                },
+                new Client
+                {
                     ClientName = "Console App",
                     ClientId = "ma_app",
                     Enabled = true,
