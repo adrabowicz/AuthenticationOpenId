@@ -23,6 +23,6 @@ namespace Configuration
         public static string AngularJsBaseIP = "http://localhost:42030/";
         public static string AngularMvcBaseIP = "http://localhost:42040/";
 
-        public static string XOneRedirectUri = AngularMvcBaseIP + "callback.html";
+        public static string XOneRedirectUri = AngularJsBaseIP + "callback.html";
     }
 }
