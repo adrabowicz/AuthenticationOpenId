@@ -9,7 +9,8 @@
                     tripResource])
 
     function tripResource($resource, appSettings) {
-        return $resource(appSettings.tripGalleryAPI + "/api/trips/:tripId", null,
+        var url = appSettings.tripGalleryAPI + "/api/trips/:tripId";
+        return $resource(url, null,
             {
                 'patch':
                     {
