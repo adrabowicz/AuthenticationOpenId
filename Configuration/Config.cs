@@ -7,6 +7,7 @@ namespace Configuration
         public static string IdentityServerIdentityIP = "http://localhost:5000/identity";
         public static string IdentityServerTokenIP = "http://localhost:5000/identity/connect/token";
         public static string IdentityServerUserInfoIP = "http://localhost:5000/identity/connect/userinfo";
+        public static string IdentityServerAuthorizeIP = "http://localhost:5000/identity/connect/authorize";
         public static string IdentityServerWellKnownIP = "http://localhost:5000/identity/.well-known/openid-configuration";
 
         public static string CidmApiBaseIP = "http://localhost:42001";
