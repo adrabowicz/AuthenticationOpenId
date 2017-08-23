@@ -86,7 +86,6 @@
     <Content Include="app\pictures\pictureCreate.html" />
     <Content Include="app\pictures\pictureCreateController.js" />
     <Content Include="app\pictures\pictureIndex.html" />
-    <Content Include="app\pictures\pictureIndexController.js" />
     <Content Include="app\trips\tripAlbum.html" />
     <Content Include="app\trips\tripAlbumController.js" />
     <Content Include="app\trips\tripCreate.html" />
