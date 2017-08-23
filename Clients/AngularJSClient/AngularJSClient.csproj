@@ -90,7 +90,6 @@
     <Content Include="app\trips\tripAlbum.html" />
     <Content Include="app\trips\tripAlbumController.js" />
     <Content Include="app\trips\tripCreate.html" />
-    <Content Include="app\trips\tripCreateController.js" />
     <Content Include="app\trips\tripIndex.html" />
     <Content Include="app\trips\tripIndexController.js" />
     <Content Include="callback.html" />
