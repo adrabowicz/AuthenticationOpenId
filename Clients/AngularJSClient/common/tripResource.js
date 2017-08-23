@@ -10,18 +10,19 @@
 
     function tripResource($resource, appSettings, tokenContainer) {
         var url = appSettings.tripGalleryAPI + "/api/trips/:tripId";
-        return $resource(url, null,
-            {
-                'query': {
-                    isArray: true,
-                    headers: { 'Authorization': 'Bearer' + tokenContainer.getToken().token }
-                },
-                'patch':
+        var queryParch = {
+            'query':
+                    {
+                        isArray: true,
+                        headers: { 'Authorization': 'Bearer' + tokenContainer.getToken().token }
+                    },
+            'patch':
                     {
                         method: 'PATCH',
                         transformRequest: createJsonPatchDocument
                     }
-            });
+        };
+        return $resource(url, null, queryParch);
     };
 
     var createJsonPatchDocument = function (data) {
