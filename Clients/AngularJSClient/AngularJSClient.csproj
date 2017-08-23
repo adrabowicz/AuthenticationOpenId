@@ -83,10 +83,6 @@
     <Content Include="app\app.js" />
     <Content Include="app\login\login.html" />
     <Content Include="app\login\loginController.js" />
-    <Content Include="app\pictures\pictureCreate.html" />
-    <Content Include="app\pictures\pictureIndex.html" />
-    <Content Include="app\trips\tripAlbum.html" />
-    <Content Include="app\trips\tripCreate.html" />
     <Content Include="app\trips\tripIndex.html" />
     <Content Include="app\trips\tripIndexController.js" />
     <Content Include="callback.html" />
