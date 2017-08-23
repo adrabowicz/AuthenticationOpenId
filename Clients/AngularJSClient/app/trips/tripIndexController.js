@@ -39,18 +39,18 @@
 
         vm.loadTrips = function()
         {
-            tripResource.query(
-                   // no query params
-                   null,
-                   // success
-                   function (data) {
-                       vm.trips = data;
-                   },
-                   // failure
-                   null);
+            var dataMapper = function (data) {
+                vm.trips = data;
+            };
+
+            var errorMessage = function () {
+                alert("error");
+            }
+
+            // no query params, success, failure
+            tripResource.query(null, dataMapper, errorMessage);
         };
    
         vm.loadTrips();       
-
     }
 }());
