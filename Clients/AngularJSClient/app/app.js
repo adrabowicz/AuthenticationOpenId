@@ -13,10 +13,6 @@
                 templateUrl: "/app/trips/tripIndex.html",
                 controller: "tripIndexController as vm"
             })
-            .when("/trips/:tripId/pictures/create", {
-                templateUrl: "/app/pictures/pictureCreate.html",
-                controller: "pictureCreateController as vm"
-            })
             .when("/trips/:tripId/createalbum", {
                  templateUrl: "/app/trips/tripAlbum.html",
                  controller: "tripAlbumController as vm"
