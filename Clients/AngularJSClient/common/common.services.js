@@ -5,7 +5,7 @@
                     ["ngResource"])
       	.constant("appSettings",
         {
-            tripGalleryAPI: "http://localhost:42040/" 
+            testApiUrl: "http://localhost:43000/" 
         });
 
      

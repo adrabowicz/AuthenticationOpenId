@@ -19,6 +19,8 @@ namespace Configuration
         public static string KpApiBaseIP = "http://localhost:42003";
         public static string KpApiTestIP = KpApiBaseIP + "/test";
 
+        public static string TestApiBaseIP = "http://localhost:43000/";
+
         public static string MvcHybridAppBaseIP = "http://localhost:42020/";
 
         public static string AngularJsBaseIP = "http://localhost:42030/";

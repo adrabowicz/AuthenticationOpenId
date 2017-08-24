@@ -26,7 +26,7 @@
              
                     // if it's a request to the API, we need to provide the
                     // access token as bearer token.             
-                    if (config.url.indexOf(appSettings.tripGalleryAPI) === 0)
+                    if (config.url.indexOf(appSettings.testApiUrl) === 0)
                     {                
                         config.headers.Authorization = 'Bearer ' + tokenContainer.getToken().token;
                     } 

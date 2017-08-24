@@ -9,7 +9,7 @@
                     tripResource])
 
     function tripResource($resource, appSettings, tokenContainer) {
-        var url = appSettings.tripGalleryAPI + "/api/trips/:tripId";
+        var url = appSettings.testApiUrl + "/test";
         var queryParch = {
             'query':
                     {

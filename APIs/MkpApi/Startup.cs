@@ -31,7 +31,5 @@ namespace MkpApi
             // plug OWIN middleware component for WebApi into the pipeline
             app.UseWebApi(config);
         }
-
-
     }
 }
