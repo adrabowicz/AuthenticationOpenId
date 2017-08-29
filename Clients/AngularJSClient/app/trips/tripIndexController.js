@@ -44,7 +44,8 @@
             };
 
             var errorMessage = function () {
-                alert("error");
+                let url = arguments[0].config.url.toString();
+                alert(url + " --- error in http request");
             }
 
             // no query params, success, failure
