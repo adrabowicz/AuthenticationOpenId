@@ -23,14 +23,7 @@
         $httpProvider.interceptors.push(function (appSettings, tokenContainer) {
             return {
                 'request': function (config) {
-             
-                    // if it's a request to the API, we need to provide the
-                    // access token as bearer token.             
-                    if (config.url.indexOf(appSettings.testApiUrl) === 0)
-                    {                
-                        config.headers.Authorization = 'Bearer ' + tokenContainer.getToken().token;
-                    } 
-         
+                    config.headers.Authorization = 'Bearer ' + tokenContainer.getToken().token;
                     return config;
                 }
             };
