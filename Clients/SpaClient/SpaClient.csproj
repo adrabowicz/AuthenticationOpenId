@@ -73,6 +73,9 @@
     <Content Include="src\tsconfig.app.json" />
     <Content Include="src\tsconfig.spec.json" />
     <Content Include="e2e\tsconfig.e2e.json" />
+    <Content Include="package.json" />
+    <Content Include="tsconfig.json" />
+    <Content Include="tslint.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -82,6 +85,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="karma.conf.js" />
+    <Content Include="protractor.conf.js" />
     <Content Include="src\app\app.component.css" />
     <Content Include="src\app\app.component.html" />
     <Content Include="src\app\home\welcome.component.html" />
