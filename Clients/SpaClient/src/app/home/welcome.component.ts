@@ -4,5 +4,4 @@
     templateUrl: 'welcome.component.html'
 })
 export class WelcomeComponent {
-    public pageTitle: string = 'Welcome';
 }
