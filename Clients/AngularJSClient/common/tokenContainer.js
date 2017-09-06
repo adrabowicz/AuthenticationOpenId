@@ -22,7 +22,7 @@
 
                     var url =
                         "http://localhost:5000/identity/connect/authorize?" +
-                        "client_id=xone_app&" +
+                        "client_id=angular_app&" +
                         "redirect_uri=" + encodeURI(window.location.protocol + "//" + window.location.host + "/callback.html") + "&" +
                         "response_type=token&" +
                         "scope=common_menu_api";

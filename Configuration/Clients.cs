@@ -12,8 +12,8 @@ namespace Configuration
             {
                 new Client
                 {
-                    ClientName = "AngularJS App",
-                    ClientId = "xone_app",
+                    ClientName = "Angular App",
+                    ClientId = "angular_app",
                     Enabled = true,
 
                     Flow = Flows.Implicit,
