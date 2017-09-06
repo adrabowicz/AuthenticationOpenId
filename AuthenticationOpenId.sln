@@ -23,7 +23,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC OWIN Client (Hybrid)", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{3A107F14-DA8C-4A7E-A7C1-B40D69A81CD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularJSClient", "Clients\AngularJSClient\AngularJSClient.csproj", "{1A541CED-860F-47C7-BA67-7444ADDD0D2A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularClient", "Clients\AngularJSClient\AngularClient.csproj", "{1A541CED-860F-47C7-BA67-7444ADDD0D2A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularMvcClient", "Clients\AngularMvcClient\AngularMvcClient.csproj", "{8495ABDD-B20E-4789-B563-318ABE98AFCB}"
 EndProject
