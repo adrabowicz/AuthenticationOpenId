@@ -18,6 +18,22 @@ namespace Configuration
 
                     Flow = Flows.Implicit,
 
+                    RedirectUris = new List<string>
+                    {
+                        "http://localhost:42030/popup.html",
+                        "http://localhost:42030/silent-renew.html"
+                    },
+
+                    PostLogoutRedirectUris = new List<string>
+                    {
+                        "http://localhost:42030/index.html"
+                    },
+
+                    AllowedCorsOrigins = new List<string>
+                    {
+                        "http://localhost:42030"
+                    },
+
                     AllowedScopes = new List<string>
                     {
                         "common_menu_api",
@@ -25,10 +41,7 @@ namespace Configuration
                         "med_data_api"
                     },
 
-                    RedirectUris = new List<string>
-                    {
-                        Config.XOneRedirectUri 
-                    }
+                    AccessTokenLifetime = 60
                 },
                 new Client
                 {
