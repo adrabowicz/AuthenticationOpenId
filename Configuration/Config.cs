@@ -23,9 +23,7 @@ namespace Configuration
 
         public static string MvcHybridAppBaseIP = "http://localhost:42020/";
 
-        public static string AngularJsBaseIP = "http://localhost:42030/";
-        public static string AngularMvcBaseIP = "http://localhost:42040/";
-
-        public static string XOneRedirectUri = AngularJsBaseIP + "callback.html";
+        public static string SpaBaseIP = "http://localhost:42030/";
+        public static string SpaRedirectUri = SpaBaseIP + "callback.html";
     }
 }

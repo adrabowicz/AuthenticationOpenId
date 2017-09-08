@@ -12,6 +12,26 @@ namespace Configuration
             {
                 new Client
                 {
+                    ClientName = "SPA App",
+                    ClientId = "spa_app",
+                    Enabled = true,
+
+                    Flow = Flows.Implicit,
+
+                    AllowedScopes = new List<string>
+                    {
+                        "common_menu_api",
+                        "user_info_api",
+                        "med_data_api"
+                    },
+
+                    RedirectUris = new List<string>
+                    {
+                        Config.SpaRedirectUri
+                    }
+                },
+                new Client
+                {
                     ClientName = "Angular App",
                     ClientId = "angular_app",
                     Enabled = true,
