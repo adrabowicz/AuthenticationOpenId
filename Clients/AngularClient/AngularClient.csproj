@@ -108,7 +108,6 @@
     <TypeScriptCompile Include="app\hero.service.ts" />
     <TypeScriptCompile Include="app\hero.ts" />
     <TypeScriptCompile Include="app\heroes.component.ts" />
-    <TypeScriptCompile Include="app\in-memory-data.service.ts" />
     <TypeScriptCompile Include="main.ts" />
   </ItemGroup>
   <ItemGroup>
