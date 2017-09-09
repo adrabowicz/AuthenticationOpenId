@@ -1,5 +1,5 @@
 ﻿import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Http, Response, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
@@ -12,10 +12,12 @@ export class AppDataService {
 
     getData(): Observable<Response> {
 
-        let authorizationHeader = 'Bearer ' + this.tokenService.getToken();
+        var headers = new Headers();
+        let authorizationHeaderValue = 'Bearer ' + this.tokenService.getToken();
+        headers.append('Authorization', authorizationHeaderValue);
 
         let url = "";
-        return this.http.get(url)
+        return this.http.get(url, { headers: headers })
             .map((response: Response) => response.json())
             .catch(this.handleError);
     }
