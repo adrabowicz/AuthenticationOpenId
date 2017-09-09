@@ -67,9 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Content Include="src\tsconfig.json" />
-    <Content Include="bs-config.aot.json" />
-    <Content Include="bs-config.json" />
+    <Content Include="tsconfig.json" />
     <Content Include="package.json" />
     <Content Include="tslint.json" />
     <None Include="Web.Debug.config">
@@ -80,42 +78,42 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="src\app\app.component.css" />
-    <Content Include="src\app\dashboard.component.css" />
-    <Content Include="src\app\dashboard.component.html" />
-    <Content Include="src\app\hero-detail.component.css" />
-    <Content Include="src\app\hero-detail.component.html" />
-    <Content Include="src\app\hero-search.component.css" />
-    <Content Include="src\app\hero-search.component.html" />
-    <Content Include="src\app\heroes.component.css" />
-    <Content Include="src\app\heroes.component.html" />
-    <Content Include="src\index.html" />
-    <Content Include="src\styles.css" />
-    <Content Include="src\systemjs-angular-loader.js" />
-    <Content Include="src\systemjs.config.js" />
+    <Content Include="app\app.component.css" />
+    <Content Include="app\dashboard.component.css" />
+    <Content Include="app\dashboard.component.html" />
+    <Content Include="app\hero-detail.component.css" />
+    <Content Include="app\hero-detail.component.html" />
+    <Content Include="app\hero-search.component.css" />
+    <Content Include="app\hero-search.component.html" />
+    <Content Include="app\heroes.component.css" />
+    <Content Include="app\heroes.component.html" />
+    <Content Include="index.html" />
+    <Content Include="styles.css" />
+    <Content Include="systemjs-angular-loader.js" />
+    <Content Include="systemjs.config.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="e2e-spec.ts" />
-    <TypeScriptCompile Include="src\app\app-routing.module.ts" />
-    <TypeScriptCompile Include="src\app\app.component.ts" />
-    <TypeScriptCompile Include="src\app\app.module.ts" />
-    <TypeScriptCompile Include="src\app\dashboard.component.ts" />
-    <TypeScriptCompile Include="src\app\hero-detail.component.ts" />
-    <TypeScriptCompile Include="src\app\hero-search.component.ts" />
-    <TypeScriptCompile Include="src\app\hero-search.service.ts" />
-    <TypeScriptCompile Include="src\app\hero.service.ts" />
-    <TypeScriptCompile Include="src\app\hero.ts" />
-    <TypeScriptCompile Include="src\app\heroes.component.ts" />
-    <TypeScriptCompile Include="src\app\in-memory-data.service.ts" />
-    <TypeScriptCompile Include="src\main.ts" />
+    <TypeScriptCompile Include="app\app-routing.module.ts" />
+    <TypeScriptCompile Include="app\app.component.ts" />
+    <TypeScriptCompile Include="app\app.module.ts" />
+    <TypeScriptCompile Include="app\dashboard.component.ts" />
+    <TypeScriptCompile Include="app\hero-detail.component.ts" />
+    <TypeScriptCompile Include="app\hero-search.component.ts" />
+    <TypeScriptCompile Include="app\hero-search.service.ts" />
+    <TypeScriptCompile Include="app\hero.service.ts" />
+    <TypeScriptCompile Include="app\hero.ts" />
+    <TypeScriptCompile Include="app\heroes.component.ts" />
+    <TypeScriptCompile Include="app\in-memory-data.service.ts" />
+    <TypeScriptCompile Include="main.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
