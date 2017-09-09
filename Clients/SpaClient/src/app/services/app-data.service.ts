@@ -12,11 +12,14 @@ export class AppDataService {
 
     getData(): Observable<Response> {
 
+        let token = this.tokenService.getToken();
+        let authorizationHeaderValue = 'Bearer ' + token;
+
         var headers = new Headers();
-        let authorizationHeaderValue = 'Bearer ' + this.tokenService.getToken();
         headers.append('Authorization', authorizationHeaderValue);
 
         let url = "";
+
         return this.http.get(url, { headers: headers })
             .map((response: Response) => response.json())
             .catch(this.handleError);
