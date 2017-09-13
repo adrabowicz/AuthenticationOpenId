@@ -8,15 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var dashboard_component_1 = require("./dashboard.component");
-var heroes_component_1 = require("./heroes.component");
-var hero_detail_component_1 = require("./hero-detail.component");
-var routes = [
-    { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-    { path: 'dashboard', component: dashboard_component_1.DashboardComponent },
-    { path: 'detail/:id', component: hero_detail_component_1.HeroDetailComponent },
-    { path: 'heroes', component: heroes_component_1.HeroesComponent }
-];
+var welcome_component_1 = require("./welcome/welcome.component");
+var login_component_1 = require("./login/login.component");
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
     }
@@ -24,9 +17,15 @@ var AppRoutingModule = (function () {
 }());
 AppRoutingModule = __decorate([
     core_1.NgModule({
-        imports: [router_1.RouterModule.forRoot(routes)],
+        imports: [router_1.RouterModule.forRoot([
+                { path: 'welcome', component: welcome_component_1.WelcomeComponent },
+                { path: 'login', component: login_component_1.LoginComponent },
+                { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+                { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
+            ])],
         exports: [router_1.RouterModule]
     })
 ], AppRoutingModule);
 exports.AppRoutingModule = AppRoutingModule;
+;
 //# sourceMappingURL=app-routing.module.js.map
