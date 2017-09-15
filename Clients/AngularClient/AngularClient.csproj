@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <TypeScriptCompile Include="app\app.ts" />
     <TypeScriptCompile Include="app\services\app-token.service.ts" />
     <Content Include="app\welcome\welcome.component.html" />
     <Content Include="packages.config" />
@@ -100,7 +101,7 @@
     <TypeScriptCompile Include="app\login\login.component.ts" />
     <TypeScriptCompile Include="app\services\app-data.service.ts" />
     <TypeScriptCompile Include="app\welcome\welcome.component.ts" />
-    <TypeScriptCompile Include="main.ts" />
+    <TypeScriptCompile Include="app\main.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

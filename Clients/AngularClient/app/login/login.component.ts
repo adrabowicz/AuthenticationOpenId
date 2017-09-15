@@ -2,7 +2,7 @@
 import { Http } from '@angular/http';
 
 @Component({
-    templateUrl: 'login.component.html'
+    templateUrl: './login.component.html'
 })
 export class LoginComponent {
     loginError = "";
