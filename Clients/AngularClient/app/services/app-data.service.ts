@@ -12,7 +12,7 @@ export class AppDataService {
 
     getData(): Observable<Response> {
 
-        let token = this.tokenService.getBearerToken();
+        let token = this.tokenService.getAccessToken();
         let authorizationHeaderValue = 'Bearer ' + token;
 
         var headers = new Headers();

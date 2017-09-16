@@ -11,6 +11,8 @@ export class WelcomeComponent {
     }
 
     callApi(): void {
-        this.appDataService.getData();
+        this.appDataService.getData().subscribe(data => {
+            alert("here");
+        });
     }
 }

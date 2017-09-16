@@ -3,19 +3,17 @@
 @Injectable()
 export class AppTokenService {
 
-    token: ""
+    accessToken: ""
 
-    constructor() { }
-
-    getBearerToken = function () {
-        if (this.token) {
-            return this.token;
+    getAccessToken = function () {
+        if (this.accessToken) {
+            return this.accessToken;
         }
 
         let tokenInLocalStorage = window.localStorage.getItem("access_token");
         if (tokenInLocalStorage) {
-            this.setSetBearerToken(tokenInLocalStorage);
-            return tokenInLocalStorage;
+            this.setAccessToken(tokenInLocalStorage);
+            return this.accessToken;
         }
 
         var url =
@@ -28,7 +26,7 @@ export class AppTokenService {
         window.location.href = url; // redirect to the Identity Server
     };
 
-    private setSetBearerToken = function (token: string) {
-        this.token = token;
+    private setAccessToken = function (token: string) {
+        this.accessToken = token;
     };
 }

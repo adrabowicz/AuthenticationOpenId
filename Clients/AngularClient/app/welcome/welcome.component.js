@@ -16,7 +16,9 @@ var WelcomeComponent = (function () {
         this.appDataService = appDataService;
     }
     WelcomeComponent.prototype.callApi = function () {
-        this.appDataService.getData();
+        this.appDataService.getData().subscribe(function (data) {
+            alert("here");
+        });
     };
     return WelcomeComponent;
 }());

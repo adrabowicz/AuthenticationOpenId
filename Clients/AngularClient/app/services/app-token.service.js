@@ -5,21 +5,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var AppTokenService = (function () {
     function AppTokenService() {
-        this.getBearerToken = function () {
-            if (this.token) {
-                return this.token;
+        this.getAccessToken = function () {
+            if (this.accessToken) {
+                return this.accessToken;
             }
             var tokenInLocalStorage = window.localStorage.getItem("access_token");
             if (tokenInLocalStorage) {
-                this.setSetBearerToken(tokenInLocalStorage);
-                return tokenInLocalStorage;
+                this.setAccessToken(tokenInLocalStorage);
+                return this.accessToken;
             }
             var url = "http://localhost:5000/identity/connect/authorize?" +
                 "client_id=angular_app&" +
@@ -28,15 +25,14 @@ var AppTokenService = (function () {
                 "scope=common_menu_api";
             window.location.href = url; // redirect to the Identity Server
         };
-        this.setSetBearerToken = function (token) {
-            this.token = token;
+        this.setAccessToken = function (token) {
+            this.accessToken = token;
         };
     }
     return AppTokenService;
 }());
 AppTokenService = __decorate([
-    core_1.Injectable(),
-    __metadata("design:paramtypes", [])
+    core_1.Injectable()
 ], AppTokenService);
 exports.AppTokenService = AppTokenService;
 //# sourceMappingURL=app-token.service.js.map
