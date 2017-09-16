@@ -10,6 +10,8 @@ import { AppTokenService } from './app-token.service';
 export class AppDataService {
     constructor(private http: Http, private tokenService: AppTokenService) { }
 
+    TestApiBaseIP = "http://localhost:43000/"
+
     getData(): Observable<Response> {
 
         let token = this.tokenService.getAccessToken();
@@ -18,7 +20,7 @@ export class AppDataService {
         var headers = new Headers();
         headers.append('Authorization', authorizationHeaderValue);
 
-        let url = "";
+        let url = this.TestApiBaseIP + "test";
 
         return this.http.get(url, { headers: headers })
             .map((response: Response) => response.json())

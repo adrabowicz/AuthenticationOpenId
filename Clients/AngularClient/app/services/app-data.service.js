@@ -19,13 +19,14 @@ var AppDataService = (function () {
     function AppDataService(http, tokenService) {
         this.http = http;
         this.tokenService = tokenService;
+        this.TestApiBaseIP = "http://localhost:43000/";
     }
     AppDataService.prototype.getData = function () {
         var token = this.tokenService.getAccessToken();
         var authorizationHeaderValue = 'Bearer ' + token;
         var headers = new http_1.Headers();
         headers.append('Authorization', authorizationHeaderValue);
-        var url = "";
+        var url = this.TestApiBaseIP + "test";
         return this.http.get(url, { headers: headers })
             .map(function (response) { return response.json(); })
             .catch(this.handleError);
