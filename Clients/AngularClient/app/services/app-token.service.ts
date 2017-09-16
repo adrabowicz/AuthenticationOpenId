@@ -7,14 +7,14 @@ export class AppTokenService {
 
     constructor() { }
 
-    getToken = function () {
+    getBearerToken = function () {
         if (this.token) {
             return this.token;
         }
 
         let tokenInLocalStorage = window.localStorage.getItem("access_token");
         if (tokenInLocalStorage) {
-            this.setToken(tokenInLocalStorage);
+            this.setSetBearerToken(tokenInLocalStorage);
             return tokenInLocalStorage;
         }
 
@@ -28,7 +28,7 @@ export class AppTokenService {
         window.location.href = url; // redirect to the Identity Server
     };
 
-    setToken = function (token: string) {
+    private setSetBearerToken = function (token: string) {
         this.token = token;
     };
 }

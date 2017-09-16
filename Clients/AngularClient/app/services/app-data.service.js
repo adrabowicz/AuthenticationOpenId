@@ -21,7 +21,7 @@ var AppDataService = (function () {
         this.tokenService = tokenService;
     }
     AppDataService.prototype.getData = function () {
-        var token = this.tokenService.getToken();
+        var token = this.tokenService.getBearerToken();
         var authorizationHeaderValue = 'Bearer ' + token;
         var headers = new http_1.Headers();
         headers.append('Authorization', authorizationHeaderValue);

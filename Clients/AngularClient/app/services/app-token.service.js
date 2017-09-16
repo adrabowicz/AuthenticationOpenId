@@ -12,13 +12,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var AppTokenService = (function () {
     function AppTokenService() {
-        this.getToken = function () {
+        this.getBearerToken = function () {
             if (this.token) {
                 return this.token;
             }
             var tokenInLocalStorage = window.localStorage.getItem("access_token");
             if (tokenInLocalStorage) {
-                this.setToken(tokenInLocalStorage);
+                this.setSetBearerToken(tokenInLocalStorage);
                 return tokenInLocalStorage;
             }
             var url = "http://localhost:5000/identity/connect/authorize?" +
@@ -28,7 +28,7 @@ var AppTokenService = (function () {
                 "scope=common_menu_api";
             window.location.href = url; // redirect to the Identity Server
         };
-        this.setToken = function (token) {
+        this.setSetBearerToken = function (token) {
             this.token = token;
         };
     }
