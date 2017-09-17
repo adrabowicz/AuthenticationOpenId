@@ -4,8 +4,9 @@
 export class AppTokenService {
 
     accessToken: ""
+    clientId = "angular_app";
 
-    getAccessToken = function () {
+    getAccessToken(): string {
         if (this.accessToken) {
             return this.accessToken;
         }
@@ -16,17 +17,22 @@ export class AppTokenService {
             return this.accessToken;
         }
 
-        var url =
-            "http://localhost:5000/identity/connect/authorize?" +
-            "client_id=angular_app&" +
-            "redirect_uri=" + encodeURI(window.location.protocol + "//" + window.location.host + "/callback.html") + "&" +
-            "response_type=token&" +
-            "scope=common_menu_api";
-
-        window.location.href = url; // redirect to the Identity Server
+        var url = this.createIdentityServerAuthorizeUrl();
+        window.location.href = url;
+        return null;
     };
 
     private setAccessToken = function (token: string) {
         this.accessToken = token;
     };
+
+    private createIdentityServerAuthorizeUrl(): string {
+        let scope = "common_menu_api";
+        let url = "http://localhost:5000/identity/connect/authorize?" +
+                    "client_id=" + this.clientId + "&" +
+                    "redirect_uri=" + encodeURI(window.location.protocol + "//" + window.location.host + "/callback.html") + "&" +
+                    "response_type=token&" +
+                    "scope=" + scope;
+        return url;
+    }
 }

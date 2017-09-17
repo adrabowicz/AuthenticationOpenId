@@ -22,8 +22,5 @@ namespace Configuration
         public static string TestApiBaseIP = "http://localhost:43000/";
 
         public static string MvcHybridAppBaseIP = "http://localhost:42020/";
-
-        public static string SpaBaseIP = "http://localhost:42030/";
-        public static string SpaRedirectUri = SpaBaseIP + "callback.html";
     }
 }

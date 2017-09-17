@@ -9,26 +9,34 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var AppTokenService = (function () {
     function AppTokenService() {
-        this.getAccessToken = function () {
-            if (this.accessToken) {
-                return this.accessToken;
-            }
-            var tokenInLocalStorage = window.localStorage.getItem("access_token");
-            if (tokenInLocalStorage) {
-                this.setAccessToken(tokenInLocalStorage);
-                return this.accessToken;
-            }
-            var url = "http://localhost:5000/identity/connect/authorize?" +
-                "client_id=angular_app&" +
-                "redirect_uri=" + encodeURI(window.location.protocol + "//" + window.location.host + "/callback.html") + "&" +
-                "response_type=token&" +
-                "scope=common_menu_api";
-            window.location.href = url; // redirect to the Identity Server
-        };
+        this.clientId = "angular_app";
         this.setAccessToken = function (token) {
             this.accessToken = token;
         };
     }
+    AppTokenService.prototype.getAccessToken = function () {
+        if (this.accessToken) {
+            return this.accessToken;
+        }
+        var tokenInLocalStorage = window.localStorage.getItem("access_token");
+        if (tokenInLocalStorage) {
+            this.setAccessToken(tokenInLocalStorage);
+            return this.accessToken;
+        }
+        var url = this.createIdentityServerAuthorizeUrl();
+        window.location.href = url;
+        return null;
+    };
+    ;
+    AppTokenService.prototype.createIdentityServerAuthorizeUrl = function () {
+        var scope = "common_menu_api";
+        var url = "http://localhost:5000/identity/connect/authorize?" +
+            "client_id=" + this.clientId + "&" +
+            "redirect_uri=" + encodeURI(window.location.protocol + "//" + window.location.host + "/callback.html") + "&" +
+            "response_type=token&" +
+            "scope=" + scope;
+        return url;
+    };
     return AppTokenService;
 }());
 AppTokenService = __decorate([
